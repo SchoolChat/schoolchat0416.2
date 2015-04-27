@@ -1,0 +1,34 @@
+%p#notice
+  = notice
+
+=@school.name
+=@school.location
+=@school.educationalprogram
+
+
+/ ここにコメント一覧
+- @comments.each do |c|
+  %p
+    =c.content
+    =c.created_at
+
+/ここで分岐させて、モヤをかける
+
+
+/ ここにコメント追加 or LOGIN/新規登録の ボタン
+- if logged_in?
+  %h2
+    Add a comment:
+
+  = form_for([@school, @school.comments.build]) do |f|
+    %p
+      = f.label :content
+      = f.text_area :content
+    %p
+      = f.submit
+
+- else
+  = link_to '回答するには登録/ログイン', new_registrations_path, method: :get
+
+= link_to 'Edit', edit_school_path(@school)
+= link_to 'Back', schools_path

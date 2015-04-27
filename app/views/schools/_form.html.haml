@@ -1,0 +1,59 @@
+= form_for :school, url: schools_path do |f|
+  - if @school.errors.any?
+    %error_explanation
+      %h2
+        = pluralize(@school.errors.count, "error")
+        %br このままでは投稿ができません。
+      %ul
+        - @school.errors.full_messages.each do |msg|
+          %li= msg
+  %p
+    = f.label :School_Name
+  %p
+    = f.text_field :name
+
+  %p
+    = f.label :School_Location
+  %p
+    = f.text_field :location
+
+  %p
+    = f.label :Educational_Program_Name
+  %p
+    = f.text_field :educationalprogram
+  = "------------------ENG--------------------"
+
+  %p
+    = f.label :ENG_School_Name
+  %p
+    = f.text_field :eng_name
+  %p
+    = f.label :ENG_Location
+  %p
+    = f.text_field :eng_location
+  %p
+    = f.label :ENG_program
+  %p
+    = f.text_field :eng_program
+
+  = "------------------------------------------"
+  %p
+    = f.label :School_Type
+  %p
+    = f.check_box :kindergarten
+
+    / # = f.check_box(:kindergarten, { :multiple => true }, true, false)
+    = "Kindergarten"
+  %p
+    = f.check_box :primary
+    = "Primary School"
+  %p
+    = f.check_box :middle
+    = "Middle School"
+  %p
+    = f.check_box :high
+    = "High School"
+
+
+  %p
+    = f.submit

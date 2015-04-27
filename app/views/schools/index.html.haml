@@ -1,0 +1,68 @@
+%p
+  = notice
+
+%h1
+  Listing Schools
+
+%table
+  %thead
+    %tr
+      %th
+        name
+      %th
+        location
+      %th
+        program
+      %th
+        kindergarten
+      %th
+        primary
+      %th
+        middle
+      %th
+        high
+      %th
+
+  %tbody
+    -@schools.each do |school|
+      %tr
+        %td
+          = school.name
+        %td
+          = school.location
+
+        %td
+          = school.educationalprogram
+        %td
+          - if school.kindergarten == nil
+            = "no input"
+          - else
+            - if school.kindergarten == true
+              = "幼"
+        %td
+          - if school.primary == nil
+            = "no input"
+          - else
+            - if school.primary == true
+              = "小"
+        %td
+          - if school.middle == nil
+            = "no input"
+          - else
+            - if school.primary == true
+              = "中"
+        %td
+          - if school.middle == nil
+            = "no input"
+          - else
+            - if school.high == true
+              = "高"
+        %td
+          = link_to 'Show', school
+        %td
+          = link_to 'Edit', edit_school_path(school)
+        %td
+          = link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+= link_to 'New School', new_school_path

@@ -8,12 +8,27 @@
 
 
 = form_for @user, url: registrations_path, method: :post do |f|
-  = f.label :name
-  = f.text_field :name
-  = f.label :email
-  = f.text_field :email
-  = f.label :password
-  = f.password_field :password
-  = f.label :password_confirmation
-  = f.password_field :password_confirmation
+  %table
+    %tbody
+      %tr
+        %td.alignright
+          ユーザネーム：
+        %td
+          = f.text_field :name
+      %tr
+        %td.alignright
+          メールアドレス*：
+        %td
+          = f.text_field :email, :placeholder => "example@example.com"
+      %tr
+        %td.alignright
+          パスワード*：
+        %td
+          = f.password_field :password
+        / %tr
+        / %td.alignright
+        /   パスワード（確認用）*：
+        / %td
+        /   = f.password_field :password_confirmation
+
   = f.submit

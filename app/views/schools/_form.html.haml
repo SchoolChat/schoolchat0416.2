@@ -1,28 +1,26 @@
 = form_for :school, url: schools_path do |f|
   - if @school.errors.any?
-    %error_explanation
-      %h2
-        = pluralize(@school.errors.count, "error")
-        %br このままでは投稿ができません。
-      %ul
-        - @school.errors.full_messages.each do |msg|
-          %li= msg
+    / %error_explanation
+    %h2
+      = pluralize(@school.errors.count, "error")
+      %br このままでは投稿ができません。
+    %ul
+      - @school.errors.full_messages.each do |msg|
+        %li= msg
   %p
     = "School_Name"
   %p
     = f.text_field :name
-
   %p
     = "School_Location"
   %p
     = f.text_field :location
-
   %p
     = "Educational_Program_Name"
   %p
     = f.text_field :educationalprogram
-  = "------------------ENG--------------------"
-
+  %p
+    = "------------------ENG--------------------"
   %p
     = "ENG_School_Name"
   %p
@@ -35,13 +33,11 @@
     = "ENG_program"
   %p
     = f.text_field :eng_program
-
-  = "------------------------------------------"
+  = "-----------------------------------------"
   %p
     = "School_Type"
   %p
     = f.check_box :kindergarten
-
     / # = f.check_box(:kindergarten, { :multiple => true }, true, false)
     = "Kindergarten"
   %p

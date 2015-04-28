@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150423081124) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "school_id_id"
     t.string   "name"
     t.string   "screen_name"
     t.string   "residence_country"
@@ -61,7 +62,6 @@ ActiveRecord::Schema.define(version: 20150423081124) do
     t.string   "school2"
     t.text     "program"
     t.text     "bio"
-    t.integer  "school_id_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

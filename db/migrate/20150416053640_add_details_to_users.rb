@@ -8,7 +8,5 @@ class AddDetailsToUsers < ActiveRecord::Migration
     add_column :users, :school2, :string
     add_column :users, :program, :text
     add_column :users, :bio, :text
-    add_reference :users, :school, index: true
-    add_foreign_key :users, :school_ids
   end
 end

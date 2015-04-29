@@ -15,6 +15,14 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    @user= current_user
+    # logout
+    reset_session
+    # cookies.delete(:remember_token)
+    redirect_to schools_path, notice: "ログアウトしました"
+  end
+
   private
   def params_user
   params.require(:user).permit(:email, :password)

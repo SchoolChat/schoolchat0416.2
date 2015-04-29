@@ -1,0 +1,12 @@
+SchoolChat----
+||
+- if logged_in?
+  = "ユーザ名:"
+  =@user.name
+  = link_to "ログアウト", sessions_path, method: :delete
+
+- else
+  = link_to "ログイン", new_sessions_path
+  ||
+  = link_to "新規登録", new_registrations_path
+

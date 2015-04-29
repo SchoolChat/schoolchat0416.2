@@ -5,6 +5,7 @@ class SchoolsController < ApplicationController
   # GET /schools.json
   def index
     @schools = School.all
+    @user = current_user
   end
 
   # GET /schools/1
@@ -13,21 +14,25 @@ class SchoolsController < ApplicationController
     @school = School.find(params[:id])
     @comment = Comment.new
     @comments = Comment.where(@school.id)
+    @user = current_user
   end
 
   # GET /schools/new
   def new
+    @user = current_user
     @school = School.new
   end
 
   # GET /schools/1/edit
   def edit
+    @user = current_user
     @school = School.find(params[:id])
   end
 
   # POST /schools
   # POST /schools.json
   def create
+    @user = current_user
     @school = School.new(school_params)
     respond_to do |format|
       if @school.save
@@ -43,6 +48,7 @@ class SchoolsController < ApplicationController
   # PATCH/PUT /schools/1
   # PATCH/PUT /schools/1.json
   def update
+    @user = current_user
     @school = School.find(params[:id])
     respond_to do |format|
       if @school.update(school_params)
@@ -58,6 +64,7 @@ class SchoolsController < ApplicationController
   # DELETE /schools/1
   # DELETE /schools/1.json
   def destroy
+    @user = current_user
     @school.destroy
     respond_to do |format|
       format.html { redirect_to schools_url, notice: 'School was successfully destroyed.' }

@@ -15,6 +15,34 @@
           ユーザネーム：
         %td
           = f.text_field :name
+
+      %tr
+        %td.alignright
+          滞在国：
+        %td
+          = f.text_field :residence_country
+
+      %tr
+        %td.alignright
+          都道府県/地域：
+        %td
+          = f.text_field :region
+
+      %tr
+        %td.alignright
+          知っている幼稚園/学校名(1)：
+        %td
+          = f.text_field :school
+      %tr
+        %td.alignright
+          知っている幼稚園/学校名(2)：
+        %td
+          = f.text_field :school2
+      %tr
+        %td.alignright
+          知っている教育プログラム(IB PYPなど)：
+        %td
+          = f.text_field :program
       %tr
         %td.alignright
           メールアドレス*：

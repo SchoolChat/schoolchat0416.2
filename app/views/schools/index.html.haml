@@ -64,5 +64,9 @@
         %td
           = link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' }
 
-%br
-= link_to 'New School', new_school_path
+
+- if logged_in?
+  %h2
+    = link_to 'New School', new_school_path
+- else
+  = link_to '(To Admin)新しい学校を登録するには登録/ログイン', new_registrations_path, method: :get

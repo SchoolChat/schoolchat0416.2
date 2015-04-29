@@ -13,7 +13,7 @@ class SchoolsController < ApplicationController
   def show
     @school = School.find(params[:id])
     @comment = Comment.new
-    @comments = Comment.where(@school.id)
+    @comments = Comment.where(school_id: @school.id)
     @user = current_user
   end
 

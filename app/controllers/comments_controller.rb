@@ -11,20 +11,22 @@ class CommentsController < ApplicationController
   end
 
   def index
-    @school = school.find(params[:school_id])
-    @comment = @school.comments.all
+    @school = School.find(params[:school_id])
+    @comments = @school.comments.all
   end
 
   def edit
-    @school = school.find(params[:school_id])
+    @user = current_user
+    @school = School.find(params[:school_id])
     @comment = @school.comments.find(params[:id])
   end
 
   def update
     @user = current_user
-    @school = school.find(params[:school_id])
+    @user = current_user
+    @school = School.find(params[:school_id])
     @comment = @school.comments.find(params[:id])
-    if @comment.update_attributes(answer_params)
+    if @comment.update_attributes(comment_params)
       redirect_to school_path(@school)
     else
       render 'edit'

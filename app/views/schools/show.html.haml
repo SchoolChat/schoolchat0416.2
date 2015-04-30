@@ -1,3 +1,4 @@
+
 %p#notice
   = notice
 
@@ -12,6 +13,8 @@
     =simple_format(c.content)
   %p
     =c.created_at
+  %p
+    =link_to '編集', edit_school_comment_path(@school.id, c.id)
 
 /ここで分岐させて、モヤをかける
 

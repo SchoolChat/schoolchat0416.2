@@ -10,6 +10,8 @@
       %th
         No.
       %th
+        口コミ数
+      %th
         name
       %th
         location
@@ -30,6 +32,8 @@
       %tr
         %td
           = school.id
+        %td
+          = school.comments.count
         %td
           = school.name
         %td

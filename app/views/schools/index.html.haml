@@ -8,6 +8,8 @@
   %thead
     %tr
       %th
+        No.
+      %th
         name
       %th
         location
@@ -26,6 +28,8 @@
   %tbody
     -@schools.each do |school|
       %tr
+        %td
+          = school.id
         %td
           = school.name
         %td

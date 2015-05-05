@@ -10,7 +10,7 @@
 / ここにコメント一覧
 - @comments.each do |c|
   %p
-    =simple_format(c.content)
+    =auto_link(simple_format(c.content))
   %p
     =c.created_at
   %p

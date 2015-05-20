@@ -12,6 +12,7 @@ class SchoolsController < ApplicationController
   # GET /schools/1.json
   def show
     @school = School.find(params[:id])
+    @hp = @school.hp
     @comment = Comment.new
     @comments= Comment.where(school_id: @school.id)
     @user = current_user

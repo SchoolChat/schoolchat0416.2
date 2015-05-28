@@ -2,20 +2,6 @@
 %p#notice
   = notice
 
-=@school.name
-=@school.location
-=@school.educationalprogram
-
-
-/ ここにコメント一覧
-- @comments.each do |c|
-  %p
-    =auto_link(simple_format(c.content))
-  %p
-    =c.created_at
-  %p
-    =link_to '編集', edit_school_comment_path(@school.id, c.id)
-
 /ここで分岐させて、モヤをかける
 
 / ここにコメント追加 or LOGIN/新規登録の ボタン
@@ -35,3 +21,126 @@
 
 = link_to 'Edit', edit_school_path(@school)
 = link_to 'Back', schools_path
+
+.mainbody
+  .lineorange
+  .lineyellow
+  .container3
+    .school-info
+      %h2
+        =@school.name
+      %table.table{:style => "margin-bottom: 0px"}
+        %tbody
+          %tr
+            %td 所在地
+            %th
+              =@school.location
+          %tr
+            %td 区分
+            %td
+              - if @school.kindergarten == nil
+                = "no input"
+              - else
+                - if @school.kindergarten == true
+                  = "幼"
+            %td
+              - if @school.primary == nil
+                = "no input"
+              - else
+                - if @school.primary == true
+                  = "小"
+            %td
+              - if @school.middle == nil
+                = "no input"
+              - else
+                - if @school.middle == true
+                  = "中"
+            %td
+              - if @school.high == nil
+                = "no input"
+              - else
+                - if @school.high == true
+                  = "高"
+
+
+  .container4
+    .detail-reviews
+      %h5 口コミが2件見つかりました。
+      %ul.detail-reviews-list{:style => "padding-left: 30px; padding-right: 30px;"}
+
+
+
+/ ここにコメント一覧
+      - @comments.each do |c|
+        %p
+          =auto_link(simple_format(c.content))
+        %p
+          =c.created_at
+        %p
+          =link_to '編集', edit_school_comment_path(@school.id, c.id)
+
+
+          %li.detail-reviews-block
+            .review-box
+              .row
+                .person-picture.col-xs-4.col-sm-4.col-md-2.col-lg-2{:style => "float: left;"}
+                  %a{:href => ""}
+                    %img.img-responsive{:src => "img/person.jpg", :style => "width: 70%; margin-bottom: 30px;"}/
+                .balloon.col-xs-12.col-sm-12.col-md-10.col-lg-10{:style => "float: right;"}
+                  %h
+                    生徒について
+                    %br
+                      　生徒は転校してきた日本人に対して
+                      %br
+                        　授業での徒たちの雰囲気は
+                        %br
+                          　生徒の様子について
+                          %br
+                            先生について
+                            %br
+                              　先生は生徒に好かれているか
+                              %br
+                                　先生は授業外でもサポートしてくれるか
+                                %br
+                                  　教えるのが上手な先生は多いか
+                                  %br
+                                    　先生は日本人に対してどう接しているか
+                                    %br
+                                      具体的な口コミ
+                .balloon.profile.col-xs-8.col-sm-8.col-md-2.col-lg-2{:style => "float: left;"}
+                  %h
+                    在籍年数：○年(○年生～○年生)
+                    %br 入学時の英語レベル：日常会話に支障が無い
+          %li.detail-reviews-block
+            .review-box
+              .row
+                .person-picture.col-xs-4.col-sm-4.col-md-2.col-lg-2{:style => "float: left;"}
+                  %a{:href => ""}
+                    %img.img-responsive.person{:src => "img/person.jpg", :style => "width: 70%; margin-bottom: 30px;"}/
+                .balloon.col-xs-12.col-sm-12.col-md-10.col-lg-10{:style => "float: right;"}
+                  %h
+                    生徒について
+                    %br
+                      　生徒は転校してきた日本人に対して
+                      %br
+                        　授業での徒たちの雰囲気は
+                        %br
+                          　生徒の様子について
+                          %br
+                            先生について
+                            %br
+                              　先生は生徒に好かれているか
+                              %br
+                                　先生は授業外でもサポートしてくれるか
+                                %br
+                                  　教えるのが上手な先生は多いか
+                                  %br
+                                    　先生は日本人に対してどう接しているか
+                                    %br
+                                      具体的な口コミ
+                .balloon.profile.col-xs-8.col-sm-8.col-md-2.col-lg-2{:style => "float: left;"}
+                  %h
+                    在籍年数：○年(○年生～○年生)
+                    %br 入学時の英語レベル：日常会話に支障が無い
+  .lineorange
+  .lineyellow

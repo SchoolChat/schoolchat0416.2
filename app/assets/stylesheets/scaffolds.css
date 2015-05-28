@@ -110,7 +110,7 @@ div {
 .intro-header {
     padding-top: 20%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     text-align: center;
-    background: url("../img/earth.jpg");
+    background: image-url(earth.jpg);
     background-position: center center ;
     background-size: cover;
 }

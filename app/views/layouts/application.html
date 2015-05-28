@@ -66,7 +66,7 @@
           <%- if logged_in? %>
             <%= "ログイン名:"%>
             <%=@user.name %>
-            <%= link_to "ログアウト", users_sign_out_pathra, :method=> :delete, :class=>"btn-signup btn btn-orange", :style=>"margin-top: 3px; float: right; margin-left: 10px;"%>
+            <%= link_to "ログアウト", users_sign_out_path, :method=> :delete, :class=>"btn-signup btn btn-orange", :style=>"margin-top: 3px; float: right; margin-left: 10px;"%>
           <%- else %>
             <%= link_to "ログイン", new_sessions_path, :class=>"btn-signup btn btn-orange", :style=>"margin-top: 3px; float: right; margin-left: 10px;"%>
             <%= link_to "新規登録", new_registrations_path, :class=>"btn-signup btn btn-orange hidden-xs", :style=>"margin-top: 3px; float:right; margin-left: 10px;" %>

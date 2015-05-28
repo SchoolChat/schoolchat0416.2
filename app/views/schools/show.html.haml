@@ -1,28 +1,12 @@
 
+.topspace
+
 %p#notice
   = notice
 
-/ここで分岐させて、モヤをかける
-
-/ ここにコメント追加 or LOGIN/新規登録の ボタン
-- if logged_in?
-  %h2
-    Add a comment:
-
-  = form_for([@school, @school.comments.build]) do |f|
-    %p
-      = f.label :content
-      = f.text_area :content
-    %p
-      = f.submit
-
-- else
-  = link_to '回答するには登録/ログイン', new_registrations_path, method: :get
-
-= link_to 'Edit', edit_school_path(@school)
-= link_to 'Back', schools_path
 
 .mainbody
+  = link_to '戻る', schools_path
   .lineorange
   .lineyellow
   .container3
@@ -43,19 +27,19 @@
               - else
                 - if @school.kindergarten == true
                   = "幼"
-            %td
+
               - if @school.primary == nil
                 = "no input"
               - else
                 - if @school.primary == true
                   = "小"
-            %td
+
               - if @school.middle == nil
                 = "no input"
               - else
                 - if @school.middle == true
                   = "中"
-            %td
+
               - if @school.high == nil
                 = "no input"
               - else
@@ -65,82 +49,62 @@
 
   .container4
     .detail-reviews
-      %h5 口コミが2件見つかりました。
+      %h5
+        口コミが
+        =@school.comments.count
+        件見つかりました。
       %ul.detail-reviews-list{:style => "padding-left: 30px; padding-right: 30px;"}
 
 
 
-/ ここにコメント一覧
+        / ここにコメント一覧
       - @comments.each do |c|
-        %p
-          =auto_link(simple_format(c.content))
-        %p
-          =c.created_at
-        %p
-          =link_to '編集', edit_school_comment_path(@school.id, c.id)
+
+        %li.detail-reviews-block
+          .review-box
+            .row
+              .person-picture.col-xs-4.col-sm-4.col-md-2.col-lg-2{:style => "float: left;"}
+                %a{:href => ""}
+                  %img.img-responsive
+                    - image_tag("person.jpg", :style=>"width: 130px; height: 130px;")
+                    / {:src => "../assets/images/person.jpg", :style => "width: 70%; margin-bottom: 30px;"}
+                    
+              .balloon.col-xs-12.col-sm-12.col-md-10.col-lg-10{:style => "float: right;"}
+                %h
+                %p
+                  =auto_link(simple_format(c.content))
+                %p
+                  =c.created_at
+                %p
+                  =link_to '編集', edit_school_comment_path(@school.id, c.id)
 
 
-          %li.detail-reviews-block
-            .review-box
-              .row
-                .person-picture.col-xs-4.col-sm-4.col-md-2.col-lg-2{:style => "float: left;"}
-                  %a{:href => ""}
-                    %img.img-responsive{:src => "img/person.jpg", :style => "width: 70%; margin-bottom: 30px;"}/
-                .balloon.col-xs-12.col-sm-12.col-md-10.col-lg-10{:style => "float: right;"}
-                  %h
-                    生徒について
-                    %br
-                      　生徒は転校してきた日本人に対して
-                      %br
-                        　授業での徒たちの雰囲気は
-                        %br
-                          　生徒の様子について
-                          %br
-                            先生について
-                            %br
-                              　先生は生徒に好かれているか
-                              %br
-                                　先生は授業外でもサポートしてくれるか
-                                %br
-                                  　教えるのが上手な先生は多いか
-                                  %br
-                                    　先生は日本人に対してどう接しているか
-                                    %br
-                                      具体的な口コミ
-                .balloon.profile.col-xs-8.col-sm-8.col-md-2.col-lg-2{:style => "float: left;"}
-                  %h
-                    在籍年数：○年(○年生～○年生)
-                    %br 入学時の英語レベル：日常会話に支障が無い
-          %li.detail-reviews-block
-            .review-box
-              .row
-                .person-picture.col-xs-4.col-sm-4.col-md-2.col-lg-2{:style => "float: left;"}
-                  %a{:href => ""}
-                    %img.img-responsive.person{:src => "img/person.jpg", :style => "width: 70%; margin-bottom: 30px;"}/
-                .balloon.col-xs-12.col-sm-12.col-md-10.col-lg-10{:style => "float: right;"}
-                  %h
-                    生徒について
-                    %br
-                      　生徒は転校してきた日本人に対して
-                      %br
-                        　授業での徒たちの雰囲気は
-                        %br
-                          　生徒の様子について
-                          %br
-                            先生について
-                            %br
-                              　先生は生徒に好かれているか
-                              %br
-                                　先生は授業外でもサポートしてくれるか
-                                %br
-                                  　教えるのが上手な先生は多いか
-                                  %br
-                                    　先生は日本人に対してどう接しているか
-                                    %br
-                                      具体的な口コミ
-                .balloon.profile.col-xs-8.col-sm-8.col-md-2.col-lg-2{:style => "float: left;"}
-                  %h
-                    在籍年数：○年(○年生～○年生)
-                    %br 入学時の英語レベル：日常会話に支障が無い
+              .balloon.profile.col-xs-8.col-sm-8.col-md-2.col-lg-2{:style => "float: left;"}
+                %h
+                  在籍年数：○年(○年生～○年生)
+                  %br 入学時の英語レベル：日常会話に支障が無い
+
+
   .lineorange
   .lineyellow
+
+
+/ ここにコメント追加 or LOGIN/新規登録の ボタン
+.adminpage
+
+  - if logged_in?
+    %h5
+      管理者画面：この学校についての口コミを投稿
+    = form_for([@school, @school.comments.build]) do |f|
+      %p
+        = f.label :content
+        = f.text_area :content
+      %p
+        = f.submit
+    %h5
+      管理者画面：
+      = link_to '学校情報をここから編集', edit_school_path(@school)
+  - else
+    = link_to '投稿・閲覧するには登録/ログイン', new_registrations_path, method: :get
+
+

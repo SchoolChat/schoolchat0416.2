@@ -1,3 +1,4 @@
+/*共通部分*/
 body {
   background-color: #fff;
   color: #333;
@@ -71,11 +72,6 @@ div {
 
 // from おっきー 以下
 
-.top-wrapper{
-  // background-image:url("");
-}
-
-
 /*LP  NAVBAR*/
 .navbar-inverse{
   border:none;
@@ -110,9 +106,9 @@ div {
 .intro-header {
     padding-top: 20%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     text-align: center;
-    background: image-url(earth.jpg);
     background-position: center center ;
     background-size: cover;
+    background-image: url("earth.jpg");
 }
 
 .btn-signup{

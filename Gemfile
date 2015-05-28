@@ -11,11 +11,6 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'sorcery'
 gem 'rails_autolink'
-# bootstrap用のgem http://ruby-rails.hatenadiary.com/entry/20140801/1406818800
-gem 'therubyracer' # javascript runtime。lessをコンパイルするために必要
-gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
-gem 'twitter-bootstrap-rails' # Bootstrapの本体
-
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

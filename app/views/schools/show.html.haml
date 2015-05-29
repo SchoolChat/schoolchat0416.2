@@ -82,9 +82,6 @@
               .balloon.profile.col-xs-8.col-sm-8.col-md-2.col-lg-2{:style => "float: left;"}
                 %h
                   =auto_link(simple_format(c.userdetail))
-                  / 在籍年数：○年(○年生～○年生)
-                  / %br 入学時の英語レベル：日常会話に支障が無い
-
 
   .lineorange
   .lineyellow
@@ -102,14 +99,16 @@
         = f.text_area :content
       %p
         = "口コミ投稿者の詳細"
-        = f.text_area :userdetail, value: :"在籍年数：○年(○年生～○年生) 入学時の英語レベル：日常会話に支障が無い　など"
+        = f.text_area :userdetail, value: :"在籍年数：○年(○年生～○年生)、入学時の英語レベル：日常会話に支障が無い、など"
 
       %p
         = f.submit
     %h5
       管理者画面：
       = link_to '学校情報をここから編集', edit_school_path(@school)
+
+
   - else
-    = link_to '投稿・閲覧するには登録/ログイン', new_registrations_path, method: :get
+    = link_to '管理者：投稿・閲覧するには登録/ログイン', new_registrations_path, method: :get
 
 

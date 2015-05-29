@@ -37,6 +37,7 @@ class SchoolsController < ApplicationController
     @school = School.new(school_params)
     respond_to do |format|
       if @school.save
+        raise
         format.html { redirect_to @school, notice: 'School was successfully created.' }
         format.json { render :show, status: :created, location: @school }
       else
@@ -81,6 +82,6 @@ class SchoolsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def school_params
-      params.require(:school).permit(:id, :name, :location, :kindergarten, :primary, :middle, :high, :program, :educationalprogram, :hp)
+      params.require(:school).permit(:id, :name, :location, :kindergarten, :primary, :middle, :high, :program, :educationalprogram, :hp, :japan)
     end
 end

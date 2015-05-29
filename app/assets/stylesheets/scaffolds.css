@@ -137,6 +137,15 @@ body ul li{
     margin: 0px 0px 0px 0px;
 }
 
+.container1 a{
+  color: #FDFAF6;
+  font-size:18px;
+}
+
+.container1 a:hover{
+  text-decoration: none;
+  opacity: 0.8;
+}
 .container2{
     background-color: #61aeba;
     color: #e7e8ec;

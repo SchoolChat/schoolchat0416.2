@@ -12,11 +12,12 @@
         <div class="container1">
           <div class="area-search">
             <div class="area-search-title" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <h4 class="menuLine">地域別に探す</h4>
+              <h4 class="menuLine"><%= link_to "地域別に学校を探す", schools_path %></h4>
             </div>
             <div class="area-search-contents">
               <div class="row" style="padding-bottom: 10px;">
-                <div class="CollapsibleBox col-lg-6 col-md-6 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1" id="CBoxCover1" style="padding-left:1px; padding-right: 1px; margin-bottom: 5px;">
+
+                <div class="CollapsibleBox col-lg-6 col-md-6 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 hidden-xs" id="CBoxCover1" style="padding-left:1px; padding-right: 1px; margin-bottom: 5px;">
                   <div class="CollapsibleBoxTitle">
                     <p class="cBoxButtons">
                       <a href="#" onclick="ShowCBox('CBoxBody1');  return false;" title="国内のインター校を探す"><p>国内のインター校を探す<span class="caret"></span></p></a>
@@ -36,7 +37,8 @@
                     </table>
                   </div>
                 </div>
-                <div class="CollapsibleBox col-lg-6 col-md-6 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1" id="CBoxCover2"  style="padding-left:1px; padding-right: 1px;">
+
+                <div class="CollapsibleBox col-lg-6 col-md-6 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 hidden-xs" id="CBoxCover2"  style="padding-left:1px; padding-right: 1px;">
                   <div class="CollapsibleBoxTitle">
                     <p class="cBoxButtons">
                       <a href="#" onclick="ShowCBox('CBoxBody2'); return false;" title="国外のインター校を探す"><p>国外のインター校を探す<span class="caret"></span></p></a>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520034419) do
+ActiveRecord::Schema.define(version: 20150529021032) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150520034419) do
     t.string   "teaching"
     t.string   "teacherjap"
     t.integer  "attendedyears"
+    t.text     "userdetail"
   end
 
   add_index "comments", ["school_id"], name: "index_comments_on_school_id"

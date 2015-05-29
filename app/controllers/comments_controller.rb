@@ -35,6 +35,6 @@ class CommentsController < ApplicationController
 
   private
     def comment_params
-      params.require(:comment).permit(:content, :name, :email, :attendedgrade, :startgrade, :englishfirst, :attitudejap, :attitudeclass, :attitude, :teacherliked, :teachersupport, :teaching, :teacherjap, :attendedyears)
+      params.require(:comment).permit(:content, :userdetail, :name, :email, :attendedgrade, :startgrade, :englishfirst, :attitudejap, :attitudeclass, :attitude, :teacherliked, :teachersupport, :teaching, :teacherjap, :attendedyears)
     end
 end

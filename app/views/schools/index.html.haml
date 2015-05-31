@@ -69,10 +69,12 @@
               = "高"
         %td
           = link_to 'Show', school
-        %td
-          = link_to 'Edit', edit_school_path(school)
-        %td
-          = link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' }
+
+        - if logged_in?
+          %td
+            = link_to 'Edit', edit_school_path(school)
+          %td
+            = link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' }
 
 
 - if logged_in?
@@ -80,3 +82,36 @@
     = link_to 'New School', new_school_path
 - else
   = link_to '(To Admin)新しい学校を登録するには登録/ログイン', new_registrations_path, method: :get
+
+
+
+.mainbody
+  .row
+    .tabbable
+      #content
+        %ul.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#1"}
+              %h4 国内
+          %li
+            %a{"data-toggle" => "tab", :href => "#2"}
+              %h4 国外
+      #my-tab-content.tab-content
+        #1.tab-pane.active
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            %h4.menuline 東京都(23区内)
+            %h3.menuline1 Busy Bees International School
+            %p.menuline2 東京都杉並区和泉1…/カリキュラム：なし/口コミ数：
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            %h4.menuline 東京都(23区外)
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            %h4.menuline 神奈川県
+        #2.tab-pane
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            %h4.menuline アメリカ
+            %h3.menuline1 Busy Bees International School
+            %p.menuline2 ニューヨーク…/カリキュラム：IB/口コミ数：3
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            %h4.menuline イギリス
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            %h4.menuline ロンドン...

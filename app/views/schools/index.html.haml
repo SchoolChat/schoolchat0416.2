@@ -99,13 +99,32 @@
       #my-tab-content.tab-content
         #1.tab-pane.active
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            /国内の学校ならば
+            -kokunai = []
+            -kokunai = @schools.where(japan:true)
+            -kokunai.each do |school|
+              %h3.menuline1
+                =school.name
+              %p.menuline2
+                =school.location[1,8]
+                =".../カリキュラム："
+                =school.program
+                ="/口コミ数："
+                =school.comments.count
+
             %h4.menuline 東京都(23区内)
             %h3.menuline1 Busy Bees International School
-            %p.menuline2 東京都杉並区和泉1…/カリキュラム：なし/口コミ数：
+            %p.menuline2 東京都杉並区和泉1…/カリキュラム：なし/口コミ数：5
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             %h4.menuline 東京都(23区外)
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             %h4.menuline 神奈川県
+
+
+
+
+        /国外の学校ならば
+
         #2.tab-pane
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             %h4.menuline アメリカ

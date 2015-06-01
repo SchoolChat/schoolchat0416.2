@@ -177,10 +177,10 @@ body ul li{
         margin:10px 10px 10px 0;
     }
 /*TOP TITLEタイトル*/
-a:hover{
+.title-title h2 a:hover{
+  font-style: none;
   background-color: white;
 }
-
 
 /*LP  NAVBAR*/
       .navbar-collapse.target{

@@ -177,7 +177,7 @@ body ul li{
         margin:10px 10px 10px 0;
     }
 /*TOP TITLEタイトル*/
-a{
+a:hover{
   background-color: white;
 }
 

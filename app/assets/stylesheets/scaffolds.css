@@ -80,12 +80,15 @@ div {
 /*LP  NAVBAR*/
 .navbar-collapse.target{
   background-color: #61afba;
+  color:white;
 }
 .navbar-header{
+  color:white;
   background-color: #61afba;
 }
 
 .navbar-inverse{
+  color:white;
   border:none;
   margin: 0px;
 }

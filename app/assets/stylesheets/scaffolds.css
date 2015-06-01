@@ -477,9 +477,7 @@ li.detail-reviews-block{
   background-color: #f3ca9e;
 }
 
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #ffffff;
   cursor: default;
   background-color: #eca14f;
@@ -488,8 +486,6 @@ li.detail-reviews-block{
   width: 150px;
   text-align: center;
 }
-
-
 .nav-tabs > li.non-active > a,
 .nav-tabs > li.non-active > a:hover,
 .nav-tabs > li.non-active > a:focus {

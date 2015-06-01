@@ -1,5 +1,4 @@
 /*共通部分*/
-
 .topspace{
   display: block;
   height: 10px;
@@ -76,9 +75,16 @@ div {
   }
 }
 
-// from おっきー 以下
+/*// from おっきー 以下*/
 
 /*LP  NAVBAR*/
+.navbar-collapse.target{
+  background-color: #61afba;
+}
+.navbar-header{
+  background-color: #61afba;
+}
+
 .navbar-inverse{
   border:none;
   margin: 0px;

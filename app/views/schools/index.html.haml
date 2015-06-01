@@ -100,13 +100,56 @@
         #1.tab-pane.active
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             /国内の学校ならば
+            -tokyo = []
+            -nottokyo = []
             -kokunai = []
             -kokunai = @schools.where(japan:true)
-            -for kokunai.each do |kokunai|
-              -if kokunai.location.include?("東京都")
-                %h4.menuline 東京都
+            / # -kokunai.order("location")
+            -kokunai.each do |kokunai|
+              / -if kokunai.location.include?("東京")
+              -if kokunai.location == "東京都" or "東京都港区"
+                %h4.menuline 東京都内
+                %h3.menuline1
+                  =kokunai.name
+                %p.menuline2
+                  =kokunai.location[0,8]
+                  ="…/カリキュラム："
+                  =kokunai.program
+                  ="/口コミ数："
+                  =kokunai.comments.count
               -else
                 %h4.menuline 東京都でない
+                %h3.menuline1
+                  =kokunai.name
+                %p.menuline2
+                  =kokunai.location[0,8]
+                  ="…/カリキュラム："
+                  =kokunai.program
+                  ="/口コミ数："
+                  =kokunai.comments.count
+
+            %h4.menuline 東京都内
+            / -tokyo.each do |tokyo|
+            /   %h3.menuline1
+            /     =tokyo.name
+            /   %p.menuline2
+            /     =tokyo.location[0,8]
+            /     ="…/カリキュラム："
+            /     =tokyo.program
+            /     ="/口コミ数："
+            /     =tokyo.comments.count
+
+
+            /   %h4.menuline 東京都でない
+            /   - nottokyo.each do |nottokyo|
+            /     %h3.menuline1
+            /       =nottokyo.name
+            /     %p.menuline2
+            /       =nottokyo.location[0,8]
+            /       ="…/カリキュラム："
+            /       =nottokyo.program
+            /       ="/口コミ数："
+            /       =nottokyo.comments.count
 
 
         #2.tab-pane

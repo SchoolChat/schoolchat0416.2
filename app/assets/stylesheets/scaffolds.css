@@ -78,20 +78,21 @@ div {
 /*// from おっきー 以下*/
 
 /*LP  NAVBAR*/
-.navbar-collapse.target{
-  background-color: #61afba;
-  color:white;
-}
-.navbar-header{
-  color:white;
-  background-color: #61afba;
-}
+      .navbar-collapse.target{
+        background-color: #61afba;
+      }
+      .navbar-header{
+        background-color: #61afba;
+      }
 
-.navbar-inverse{
-  color:white;
-  border:none;
-  margin: 0px;
-}
+      .navbar-inverse{
+        border:none;
+        margin: 0px;
+      }
+
+      .navbar-inverse .navbar-nav>li>a{
+        color:white;
+      }
 
 /*共通部分*/
 #header {
@@ -215,6 +216,7 @@ body ul li{
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
+    border:none;
     border-color: #e7e8ec;
 }
 .navbar-inverse .navbar-nav > .open > a,

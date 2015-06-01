@@ -77,23 +77,6 @@ div {
 
 /*// from おっきー 以下*/
 
-/*LP  NAVBAR*/
-      .navbar-collapse.target{
-        background-color: #61afba;
-      }
-      .navbar-header{
-        background-color: #61afba;
-      }
-
-      .navbar-inverse{
-        border:none;
-        margin: 0px;
-      }
-
-      .navbar-inverse .navbar-nav>li>a{
-        color:white;
-      }
-
 /*共通部分*/
 #header {
   font-size: x-large;
@@ -119,6 +102,10 @@ div {
     width: 130px;
     text-align: left;
     font-size:30px;
+}
+
+.btn:hover, .btn:focus, .btn.focus{
+  color:white;
 }
 
 .intro-header {
@@ -189,9 +176,31 @@ body ul li{
         display:block;
         margin:10px 10px 10px 0;
     }
+/*TOP TITLEタイトル*/
+a{
+  background-color: white;
+}
 
+
+/*LP  NAVBAR*/
+      .navbar-collapse.target{
+        background-color: #61afba;
+      }
+      .navbar-header{
+        background-color: #61afba;
+      }
+
+      .navbar-inverse{
+        border:none;
+        margin: 0px;
+      }
+
+      .navbar-inverse .navbar-nav>li>a{
+        color:white;
+      }
 
 /*LP Navbar */
+
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     border:none;
     color: #e7e8ec;

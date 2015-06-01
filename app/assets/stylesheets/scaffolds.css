@@ -193,15 +193,18 @@ body ul li{
 
 /*LP Navbar */
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    border:none;
     color: #e7e8ec;
     background-color: #3c8e99;
 }
 .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
+    border:none;
     color: #e7e8ec;
     background-color: transparent;
 }
 .navbar-inverse .navbar-toggle {
     border-color: white;
+    border:none;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {

@@ -667,7 +667,7 @@ li.detail-reviews-block{
   font-weight: bold;
 }
 a h3.menuline1:hover{
-  font-style: none;
+  text-decoration: none;
   opacity: 0.9;
 }
 .menuline1 a{

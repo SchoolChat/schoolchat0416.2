@@ -666,3 +666,8 @@ li.detail-reviews-block{
 .col-lg-12.col-md-12.col-sm-12.col-xs-12{
   padding: 0px;
 }
+
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+  border:none;
+}

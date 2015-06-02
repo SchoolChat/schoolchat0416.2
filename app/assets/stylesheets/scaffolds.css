@@ -37,6 +37,7 @@ a {
   }
 }
 
+
 div {
   &.field, &.actions {
     margin-bottom: 10px;
@@ -664,6 +665,10 @@ li.detail-reviews-block{
   color: #fff;
   line-height: 140%;
   font-weight: bold;
+}
+a h3.menuline1:hover{
+  font-style: none;
+  opacity: 0.9;
 }
 .menuline1 a{
   color: #fff;

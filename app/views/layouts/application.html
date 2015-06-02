@@ -79,14 +79,14 @@
             <%= link_to "新規登録", new_registrations_path, :class=>"btn-signup btn btn-orange", :style=>"margin-top: 3px; float:right; margin-left: 10px; color:white;" %>
           <%end%>
 
-          <!--    <div class="buttons">
+             <div class="buttons">
             <button type="button" href="" class="btn-signup btn btn-orange hidden-xs" style="margin-top: 3px; float:right; margin-left: 10px;">
               新規登録
             </button>
             <button type="button" href="" class="btn-signup btn btn-orange" style="margin-top: 3px; float: right; margin-left: 10px;">
               ログイン
             </button>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -109,9 +109,9 @@
             <span class="caret"></span>
             </a>
               <ul class="dropdown-menu">
-                <li><a href="area-search">地域別に探す</a></li>
+                <li><a href="area-search"><%= link_to "地域別に", schools_path %></a></li>
                 <li><a href="#course-search">区分別に探す</a></li>
-                <li><a href="#curriculum-search">カリキュラム別に探す</a></li>
+                <!-- <li><a href="#curriculum-search">カリキュラム別に探す</a></li> -->
                 <li><%= link_to "学校一覧へ", schools_path %></li>
               </ul>
             </li>

@@ -100,14 +100,14 @@
         #1.tab-pane.active
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             /国内の学校ならば
-            -tokyo = []
-            -nottokyo = []
+            / -tokyo = []
+            / -nottokyo = []
             -kokunai = []
             -kokunai = @schools.where(japan:true)
             / # -kokunai.order("location")
             -kokunai.each do |kokunai|
               / -if kokunai.location.include?("東京")
-              -if kokunai.location == "東京都" or "東京都港区"
+              -if kokunai.location == "東京都" || kokunai.location == "東京都品川区北品川5-12-4" || kokunai.location == "東京都武蔵野市西久保2-6-2" || kokunai.location == "東京都練馬区豊玉北4-29-11" || kokunai.location == "東京都世田谷区羽根木1-21-11" || kokunai.location == "東京都港区六本木6-16-5" || kokunai.location == "東京都港区三田3-4-22" || kokunai.location == "東京都港区元麻布2-14-7" || kokunai.location == "東京都新宿区四谷2-11-6" || kokunai.location == "東京都江東区白河1-5-15" || kokunai.location == "東京都江東区東陽2-2-20" || kokunai.location == "東京都品川区北品川5-8-20" || kokunai.location == "目黒校：東京都目黒区青葉台2-11-5" || kokunai.location == "東京都品川区上大崎2-7-16" || kokunai.location == "東京都目黒区自由ケ丘1-14-16" || kokunai.location == "東京都台東区浅草橋5-1-35"
                 %h4.menuline 東京都内
                 %h3.menuline1
                   =kokunai.name
@@ -118,7 +118,7 @@
                   ="/口コミ数："
                   =kokunai.comments.count
               -else
-                %h4.menuline 東京都でない
+                %h4.menuline 東京都以外
                 %h3.menuline1
                   =kokunai.name
                 %p.menuline2
@@ -157,16 +157,21 @@
 
 
         #2.tab-pane
-          .col-lg-12.col-md-12.col-sm-12.col-xs-12
-            %h4.menuline アメリカ
-            %h3.menuline1 Busy Bees International School
-            %p.menuline2 ニューヨーク…/カリキュラム：IB/口コミ数：3
-          .col-lg-12.col-md-12.col-sm-12.col-xs-12
-            %h4.menuline イギリス
-          .col-lg-12.col-md-12.col-sm-12.col-xs-12
-            %h4.menuline ロンドン...
-
-
+          -kokugai = []
+          -kokugai = @schools.where(japan:false)
+          -kokugai.each do |kokugai|
+            / -if kokunai.location.include?("東京")
+            / -if kokugai.location == "Hamburg" || kokugai.location == "Singapore" || kokugai.location == "San Diego" || kokugai.location == "Bangkok" || kokugai.location == "Madagascar"|| kokugai.location == "Beijing" || kokugai.location == "Brussels" || kokugai.location == "Burnaby"
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              %h4.menuline
+                =kokugai.location
+              %h3.menuline1
+                =kokugai.name
+              %p.menuline2
+                ="カリキュラム："
+                =kokugai.program
+                ="/口コミ数："
+                =kokugai.comments.count
 
             .topspace
             .topspace

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get 'schools/indexkubun'
   get 'welcome/index'
 
   resources :schools do

@@ -2,82 +2,79 @@
 .topspace
 %p
   = notice
-
-%h1
-  Listing Schools
-
-%table
-  %thead
-    %tr
-      %th
-        No.
-      %th
-        口コミ数
-      %th
-        name
-      %th
-        location
-      %th
-        program
-      %th
-        kindergarten
-      %th
-        primary
-      %th
-        middle
-      %th
-        high
-      %th
-
-  %tbody
-    -@schools.each do |school|
-      %tr
-        %td
-          = school.id
-        %td
-          = school.comments.count
-        %td
-          = school.name
-        %td
-          = school.location
-
-        %td
-          = school.educationalprogram
-        %td
-          - if school.kindergarten == nil
-            = "no input"
-          - else
-            - if school.kindergarten == true
-              = "幼"
-        %td
-          - if school.primary == nil
-            = "no input"
-          - else
-            - if school.primary == true
-              = "小"
-        %td
-          - if school.middle == nil
-            = "no input"
-          - else
-            - if school.middle == true
-              = "中"
-        %td
-          - if school.high == nil
-            = "no input"
-          - else
-            - if school.high == true
-              = "高"
-        %td
-          = link_to 'Show', school
-
-        - if logged_in?
-          %td
-            = link_to 'Edit', edit_school_path(school)
-          %td
-            = link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' }
-
-
 - if logged_in?
+  %h1
+    Listing Schools
+
+  %table
+    %thead
+      %tr
+        %th
+          No.
+        %th
+          口コミ数
+        %th
+          name
+        %th
+          location
+        %th
+          program
+        %th
+          kindergarten
+        %th
+          primary
+        %th
+          middle
+        %th
+          high
+        %th
+
+    %tbody
+      -@schools.each do |school|
+        %tr
+          %td
+            = school.id
+          %td
+            = school.comments.count
+          %td
+            = school.name
+          %td
+            = school.location
+
+          %td
+            = school.educationalprogram
+          %td
+            - if school.kindergarten == nil
+              = "no input"
+            - else
+              - if school.kindergarten == true
+                = "幼"
+          %td
+            - if school.primary == nil
+              = "no input"
+            - else
+              - if school.primary == true
+                = "小"
+          %td
+            - if school.middle == nil
+              = "no input"
+            - else
+              - if school.middle == true
+                = "中"
+          %td
+            - if school.high == nil
+              = "no input"
+            - else
+              - if school.high == true
+                = "高"
+          %td
+            = link_to 'Show', school
+
+          - if logged_in?
+            %td
+              = link_to 'Edit', edit_school_path(school)
+            %td
+              = link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' }
   %h2
     = link_to 'New School', new_school_path
 - else
@@ -112,6 +109,12 @@
                 %h3.menuline1
                   = link_to kokunai.name, kokunai
                 %p.menuline2
+                  ="　場所："
+                  =kokunai.location[0,8]
+                  ="…/カリキュラム："
+                  =kokunai.program
+                  ="/口コミ数："
+                  =kokunai.comments.count
                   ="区分："
                   - if kokunai.kindergarten == nil
                     = "no input"
@@ -133,24 +136,38 @@
                   - else
                     - if kokunai.high == true
                       = "高"
-                  =kokunai.location[0,8]
-                  ="…/カリキュラム："
-                  =kokunai.program
-                  ="/口コミ数："
-                  =kokunai.comments.count
-
-
               -else
                 %h4.menuline 東京都以外
                 %h3.menuline1
                   = link_to kokunai.name, kokunai
                 %p.menuline2
+                  ="　場所："
                   =kokunai.location[0,8]
                   ="…/カリキュラム："
                   =kokunai.program
                   ="/口コミ数："
                   =kokunai.comments.count
-
+                  ="区分："
+                  - if kokunai.kindergarten == nil
+                    = "no input"
+                  - else
+                    - if kokunai.kindergarten == true
+                      = "幼"
+                  - if kokunai.primary == nil
+                    = "no input"
+                  - else
+                    - if kokunai.primary == true
+                      = "小"
+                  - if kokunai.middle == nil
+                    = "no input"
+                  - else
+                    - if kokunai.middle == true
+                      = "中"
+                  - if kokunai.high == nil
+                    = "no input"
+                  - else
+                    - if kokunai.high == true
+                      = "高"
             / -tokyo.each do |tokyo|
             /   %h3.menuline1
             /     =tokyo.name
@@ -195,7 +212,27 @@
                 =kokugai.program
                 ="/口コミ数："
                 =kokugai.comments.count
-
+                ="区分："
+                - if kokunai.kindergarten == nil
+                  = "no input"
+                - else
+                  - if kokunai.kindergarten == true
+                    = "幼"
+                - if kokunai.primary == nil
+                  = "no input"
+                - else
+                  - if kokunai.primary == true
+                    = "小"
+                - if kokunai.middle == nil
+                  = "no input"
+                - else
+                  - if kokunai.middle == true
+                    = "中"
+                - if kokunai.high == nil
+                  = "no input"
+                - else
+                  - if kokunai.high == true
+                    = "高"
             .topspace
             .topspace
             .topspace

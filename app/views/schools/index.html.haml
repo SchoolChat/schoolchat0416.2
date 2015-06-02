@@ -158,7 +158,7 @@
 
         #2.tab-pane
           -kokugai = []
-          -kokugai = @schools.where(japan:false)
+          -kokugai != @schools.where(japan:true)
           -kokugai.each do |kokugai|
             / -if kokunai.location.include?("東京")
             / -if kokugai.location == "Hamburg" || kokugai.location == "Singapore" || kokugai.location == "San Diego" || kokugai.location == "Bangkok" || kokugai.location == "Madagascar"|| kokugai.location == "Beijing" || kokugai.location == "Brussels" || kokugai.location == "Burnaby"

@@ -198,7 +198,7 @@
 
         #2.tab-pane
           -kokugai = []
-          -kokugai != @schools.where(japan:true)
+          -kokugai = @schools.where(japan:false)
           -kokugai.each do |kokugai|
             / -if kokunai.location.include?("東京")
             / -if kokugai.location == "Hamburg" || kokugai.location == "Singapore" || kokugai.location == "San Diego" || kokugai.location == "Bangkok" || kokugai.location == "Madagascar"|| kokugai.location == "Beijing" || kokugai.location == "Brussels" || kokugai.location == "Burnaby"
@@ -206,32 +206,32 @@
               %h4.menuline
                 =kokugai.location
               %h3.menuline1
-                = link_to kokugai.name, kokunai
+                = link_to kokugai.name, kokugai
               %p.menuline2
                 ="カリキュラム："
                 =kokugai.program
                 ="/口コミ数："
                 =kokugai.comments.count
                 ="区分："
-                - if kokunai.kindergarten == nil
+                - if kokugai.kindergarten == nil
                   = "no input"
                 - else
-                  - if kokunai.kindergarten == true
+                  - if kokugai.kindergarten == true
                     = "幼"
-                - if kokunai.primary == nil
+                - if kokugai.primary == nil
                   = "no input"
                 - else
-                  - if kokunai.primary == true
+                  - if kokugai.primary == true
                     = "小"
-                - if kokunai.middle == nil
+                - if kokugai.middle == nil
                   = "no input"
                 - else
-                  - if kokunai.middle == true
+                  - if kokugai.middle == true
                     = "中"
-                - if kokunai.high == nil
+                - if kokugai.high == nil
                   = "no input"
                 - else
-                  - if kokunai.high == true
+                  - if kokugai.high == true
                     = "高"
             .topspace
             .topspace

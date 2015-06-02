@@ -184,6 +184,10 @@ body ul li{
   height: 70px;
 }
 
+.area-search-title a:hover{
+  text-decoration: none;
+}
+
 /*LP  NAVBAR*/
       .navbar-collapse.target{
         background-color: #61afba;
@@ -660,6 +664,13 @@ li.detail-reviews-block{
   line-height: 140%;
   font-weight: bold;
 }
+.menuline1 a{
+  color: #fff;
+  font-size: 24px;
+  line-height: 140%;
+  font-weight: bold;
+}
+
 .menuline2{
   margin: 0 0 10px 0;
   padding: 2px 8px;

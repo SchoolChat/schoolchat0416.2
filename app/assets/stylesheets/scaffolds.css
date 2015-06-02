@@ -666,7 +666,7 @@ li.detail-reviews-block{
   line-height: 140%;
   font-weight: bold;
 }
-a h3.menuline1:hover{
+h3.menuline1:hover{
   text-decoration: none;
   opacity: 0.9;
 }

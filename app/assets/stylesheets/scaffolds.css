@@ -92,8 +92,6 @@ div {
 }
 
 /*LP 上の方 しんきとうろくへすすむボタン*/
-.btn-signup{
-}
 .title{
     height:50px;
 }
@@ -104,7 +102,7 @@ div {
     font-size:30px;
 }
 
-.btn:hover, .btn:focus, .btn.focus{
+.btn, .btn:hover, .btn:focus, .btn.focus{
   color:white;
 }
 
@@ -414,8 +412,8 @@ footer {
     border-style: solid;
     background: #eca14f;
     color: #f9f4ed;
-    line-height: 140%;
-    font-weight: bold;
+    line-height: 70%;
+    /*font-weight: bold;*/
 }
 
 .subject{
@@ -642,9 +640,9 @@ li.detail-reviews-block{
     border-style: solid;
     background: #eca14f;
     color: #f9f4ed;
-    line-height: 140%;
-    font-weight: bold;
-    text-align: center;
+    line-height: 70%;
+    /*font-weight: bold;*/
+    /*text-align: center;*/
 }
 
 .menuline1{
@@ -663,8 +661,7 @@ li.detail-reviews-block{
   padding: 2px 8px;
   background-color: #F0F2C4;
   color: #222222;
-  line-height: 140%;
-
+  line-height: 70%;
 }
 .col-lg-12.col-md-12.col-sm-12.col-xs-12{
   padding: 0px;

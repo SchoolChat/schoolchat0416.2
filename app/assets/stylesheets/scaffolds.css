@@ -176,12 +176,12 @@ body ul li{
     }
 /*TOP WELCOMEindexTITLEタイトル*/
 .title-title h2 a:hover{
-  font-style: none;
+  text-decoration: none;
   background-color: white;
 }
 
-.area-search-title h4.searchbyarea{
-  height: 50px;
+.area-search-title a.searchbyarea{
+  height: 70px;
 }
 
 /*LP  NAVBAR*/

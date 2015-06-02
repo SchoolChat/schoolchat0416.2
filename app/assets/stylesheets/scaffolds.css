@@ -174,10 +174,14 @@ body ul li{
         display:block;
         margin:10px 10px 10px 0;
     }
-/*TOP TITLEタイトル*/
+/*TOP WELCOMEindexTITLEタイトル*/
 .title-title h2 a:hover{
   font-style: none;
   background-color: white;
+}
+
+.area-search-title h4.searchbyarea{
+  height: 50px;
 }
 
 /*LP  NAVBAR*/

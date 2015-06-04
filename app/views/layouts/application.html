@@ -124,6 +124,13 @@
             <!-- <li><a href="">インター/IBとは？</a></li> -->
             <li><a href="">口コミを投稿</a></li>
             <li><a href="">ABOUT US</a></li>
+            <%- if logged_in?%>
+              <li><%= link_to "ログアウト", users_sign_out_path, :method=> :delete %></li>
+            <%- else%>
+              <li><%= link_to "ログイン", new_sessions_path %></li>
+              <li><%= link_to "新規登録", new_registrations_path %></li>
+            <%end%>
+
           </ul>
         </div>
       </nav>

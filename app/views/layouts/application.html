@@ -72,8 +72,8 @@
           </div>
 
           <%- if logged_in? %>
-            <%= "ログイン名:"%>
-            <%=@user.name %>
+<!--             <%= "ログイン名:"%>
+            <%=@user.name %> -->
             <%= link_to "ログアウト", users_sign_out_path, :method=> :delete, :class=>"btn-signup btn btn-orange", :style=>"margin-top: 3px; float: right; margin-left: 10px; color: white;"%>
           <%- else %>
              <%= link_to "ログイン", new_sessions_path, :class=>"btn-signup btn btn-orange", :style=>"margin-top: 3px; float: right; margin-left: 10px; color: white;"%>

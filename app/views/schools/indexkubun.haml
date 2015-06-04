@@ -96,17 +96,12 @@
             -kokunai = []
             -kokunai = @schools.where(japan:true)
             / # -kokunai.order("location")
-
             -kindergarten = []
             -kindergarten = kokunai.where(kindergarten:true)
-
-
             -primary = []
             -primary = kokunai.where(primary:true)
-
             -middle = []
             -middle = kokunai.where(middle:true)
-
             -high = []
             -high = kokunai.where(high:true)
 
@@ -257,45 +252,160 @@
 
 
         #2.tab-pane
-          -kokugai = []
-          -kokugai = @schools.where(japan:false)
-          -kokugai.each do |kokugai|
-            / -if kokunai.location.include?("東京")
-            / -if kokugai.location == "Hamburg" || kokugai.location == "Singapore" || kokugai.location == "San Diego" || kokugai.location == "Bangkok" || kokugai.location == "Madagascar"|| kokugai.location == "Beijing" || kokugai.location == "Brussels" || kokugai.location == "Burnaby"
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12
-              %h4.menuline
-                =kokugai.location
-              = link_to school_path(kokugai) do
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            -kokugai = []
+            -kokugai = @schools.where(japan:false)
+            -kindergarten = []
+            -kindergarten = kokugai.where(kindergarten:true)
+            -primary = []
+            -primary = kokugai.where(primary:true)
+            -middle = []
+            -middle = kokugai.where(middle:true)
+            -high = []
+            -high = kokugai.where(high:true)
+
+            %h4.menuline
+              = "幼稚園　"
+            -kindergarten.each do |kindergarten|
+              = link_to school_path(kindergarten) do
                 %h4.menuline1
-                  = kokugai.name
+                  = kindergarten.name
                 %p.menuline2
-                  ="カリキュラム："
-                  =kokugai.program
+                  ="　場所："
+                  =kindergarten.location[0,8]
+                  ="…/カリキュラム："
+                  =kindergarten.program
                   ="/口コミ数："
-                  =kokugai.comments.count
+                  =kindergarten.comments.count
                   ="区分："
-                  - if kokugai.kindergarten == nil
+                  - if kindergarten.kindergarten == nil
                     = "no input"
                   - else
-                    - if kokugai.kindergarten == true
+                    - if kindergarten.kindergarten == true
                       = "幼"
-                  - if kokugai.primary == nil
+                  - if kindergarten.primary == nil
                     = "no input"
                   - else
-                    - if kokugai.primary == true
+                    - if kindergarten.primary == true
                       = "小"
-                  - if kokugai.middle == nil
+                  - if kindergarten.middle == nil
                     = "no input"
                   - else
-                    - if kokugai.middle == true
+                    - if kindergarten.middle == true
                       = "中"
-                  - if kokugai.high == nil
+                  - if kindergarten.high == nil
                     = "no input"
                   - else
-                    - if kokugai.high == true
+                    - if kindergarten.high == true
                       = "高"
-            .topspace
-            .topspace
-            .topspace
-            .topspace
-            .topspace
+
+            %h4.menuline
+              = "小学校　"
+            -primary.each do |primary|
+              = link_to school_path(primary) do
+                %h4.menuline1
+                  = primary.name
+                %p.menuline2
+                  ="　場所："
+                  =primary.location[0,8]
+                  ="…/カリキュラム："
+                  =primary.program
+                  ="/口コミ数："
+                  =primary.comments.count
+                  ="区分："
+                  - if primary.kindergarten == nil
+                    = "no input"
+                  - else
+                    - if primary.kindergarten == true
+                      = "幼"
+                  - if primary.primary == nil
+                    = "no input"
+                  - else
+                    - if primary.primary == true
+                      = "小"
+                  - if primary.middle == nil
+                    = "no input"
+                  - else
+                    - if primary.middle == true
+                      = "中"
+                  - if primary.high == nil
+                    = "no input"
+                  - else
+                    - if primary.high == true
+                      = "高"
+
+            %h4.menuline
+              = "中学校　"
+            -middle.each do |middle|
+              = link_to school_path(middle) do
+                %h4.menuline1
+                  = middle.name
+                %p.menuline2
+                  ="　場所："
+                  =middle.location[0,8]
+                  ="…/カリキュラム："
+                  =middle.program
+                  ="/口コミ数："
+                  =middle.comments.count
+                  ="区分："
+                  - if middle.kindergarten == nil
+                    = "no input"
+                  - else
+                    - if middle.kindergarten == true
+                      = "幼"
+                  - if middle.primary == nil
+                    = "no input"
+                  - else
+                    - if middle.primary == true
+                      = "小"
+                  - if middle.middle == nil
+                    = "no input"
+                  - else
+                    - if middle.middle == true
+                      = "中"
+                  - if middle.high == nil
+                    = "no input"
+                  - else
+                    - if middle.high == true
+                      = "高"
+
+            %h4.menuline
+              = "高校"
+            -high.each do |high|
+              = link_to school_path(high) do
+                %h4.menuline1
+                  = high.name
+                %p.menuline2
+                  ="　場所："
+                  =high.location[0,8]
+                  ="…/カリキュラム："
+                  =high.program
+                  ="/口コミ数："
+                  =high.comments.count
+                  ="区分："
+                  - if high.kindergarten == nil
+                    = "no input"
+                  - else
+                    - if high.kindergarten == true
+                      = "幼"
+                  - if high.primary == nil
+                    = "no input"
+                  - else
+                    - if high.primary == true
+                      = "小"
+                  - if high.middle == nil
+                    = "no input"
+                  - else
+                    - if high.middle == true
+                      = "中"
+                  - if high.high == nil
+                    = "no input"
+                  - else
+                    - if high.high == true
+                      = "高"
+
+          .topspace
+          .topspace
+          .topspace
+          .topspace
+          .topspace

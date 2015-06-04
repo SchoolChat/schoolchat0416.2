@@ -90,7 +90,7 @@
 / ここにコメント追加 or LOGIN/新規登録の ボタン
 .adminpage
 
-  - if logged_in?
+  - if logged_in?&& current_user.email == "haru.okaniwa@ezweb.ne.jp"
     %h5
       管理者画面：この学校についての口コミを投稿
     = form_for([@school, @school.comments.build]) do |f|

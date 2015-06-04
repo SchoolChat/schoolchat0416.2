@@ -1,7 +1,7 @@
 / LISTING SCHOOLS
 %p
   = notice
-- if logged_in?
+- if logged_in?&& current_user.email == "haru.okaniwa@ezweb.ne.jp" 
 
   %table
     %thead

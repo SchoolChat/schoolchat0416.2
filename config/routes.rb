@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'schools/indexkubun'
   get 'welcome/index'
-
+  get 'welcome/about'
+  get 'welcome/submit'
   resources :schools do
     resources :comments
   end

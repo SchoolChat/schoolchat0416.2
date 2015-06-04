@@ -171,6 +171,10 @@ body ul li{
       margin-bottom: 15px;
     }
 
+.paddingleft10{
+  padding-left: 10%;
+}
+
     .floatleft{
         float:left;
     }

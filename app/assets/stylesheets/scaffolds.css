@@ -113,7 +113,7 @@ div {
     text-align: center;
     background-position: center center ;
     background-size: cover;
-    background-image: url("earth.jpg");
+    background-image:  image-url("assets/earth.jpg");
     /*background-image: url("../images/earth.jpg");*/
 }
 

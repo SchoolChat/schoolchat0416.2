@@ -1,59 +1,95 @@
-%h1
-  registrations new
-
-= link_to "ログインする", new_sessions_path
 
 - @user.errors.each do |attr, message|
   .alert.alert-danger= message
 
 
-= form_for @user, url: registrations_path, method: :post do |f|
-  %table
-    %tbody
-      %tr
-        %td.alignright
-          ユーザネーム：
-        %td
-          = f.text_field :name
-      %tr
-        %td.alignright
-          滞在国：
-        %td
-          = f.text_field :residence_country
-      %tr
-        %td.alignright
-          都道府県/都市名：
-        %td
-          = f.text_field :region
-      / %tr
-      /   %td.alignright
-      /     知っている幼稚園/学校名(1)：
-      /   %td
-      /     = f.text_field :school
-      / %tr
-      /   %td.alignright
-      /     知っている幼稚園/学校名(2)：
-      /   %td
-      /     = f.text_field :school2
-      / %tr
-      /   %td.alignright
-      /     知っている教育プログラム(IB PYPなど)：
-      /   %td
-      /     = f.text_field :program
-      %tr
-        %td.alignright
-          メールアドレス*：
-        %td
-          = f.text_field :email, :placeholder => "example@example.com"
-      %tr
-        %td.alignright
-          パスワード*：
-        %td
-          = f.password_field :password
-      %tr
-        %td.alignright
-          パスワード（確認用）*：
-        %td
-          = f.password_field :password_confirmation
+.mainbody
+  = link_to "ログインする", new_sessions_path
 
-  = f.submit
+  = form_for @user, url: registrations_path, method: :post do |f|
+    .input-box{:style => "text-align: center;"}
+      %p
+      お名前
+      %br
+      = f.text_field :name, :placeholder => "山田花子"
+      .space10px
+      %br
+      メールアドレス
+      %br
+      = f.text_field :email, :placeholder => "example@example.com"
+      .space10px
+      %br
+      パスワード
+      %br
+      = f.password_field :password, :placeholder => "******"
+      .space10px
+      %br
+      パスワード(確認用)
+      %br
+      = f.password_field :password_confirmation, :placeholder => "******"
+      .space10px
+      %br
+      お住まいの都道府県　または　国名
+      %br
+      = f.text_field :region, :placeholder => "東京都"
+      .space10px
+      %br
+      お子様のご年齢
+      %br
+      %input{:maxlength => "3", :name => "school-name", :size => "5", :type => "text"}
+      ="歳"
+      .space10px
+      .space10px
+      %br
+      = f.submit'登録する', :class => "btn-signup btn btn-orange"
+
+/ = form_for @user, url: registrations_path, method: :post do |f|
+/   %table
+/     %tbody
+/       %tr
+/         %td.alignright
+/           ユーザネーム：
+/         %td
+/           = f.text_field :name
+/       %tr
+/         %td.alignright
+/           滞在国：
+/         %td
+/           = f.text_field :residence_country
+/       %tr
+/         %td.alignright
+/           都道府県/都市名：
+/         %td
+/           = f.text_field :region
+/     / %tr
+/     /   %td.alignright
+/     /     知っている幼稚園/学校名(1)：
+/     /   %td
+/     /     = f.text_field :school
+/     / %tr
+/     /   %td.alignright
+/     /     知っている幼稚園/学校名(2)：
+/     /   %td
+/     /     = f.text_field :school2
+/     / %tr
+/     /   %td.alignright
+/     /     知っている教育プログラム(IB PYPなど)：
+/     /   %td
+/     /     = f.text_field :program
+/     %tr
+/       %td.alignright
+/         メールアドレス*：
+/       %td
+/         = f.text_field :email, :placeholder => "example@example.com"
+/     %tr
+/       %td.alignright
+/         パスワード*：
+/       %td
+/         = f.password_field :password
+/     %tr
+/       %td.alignright
+/         パスワード（確認用）*：
+/       %td
+/         = f.password_field :password_confirmation
+
+/ = f.submit

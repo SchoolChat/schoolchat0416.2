@@ -113,7 +113,8 @@ div {
     text-align: center;
     background-position: center center ;
     background-size: cover;
-    background-image:  image-url("assets/earth.jpg");
+    /*background-image: url(<%= asset_path "earth.jpg" %>);*/
+    /*background-image:  url("earth.jpg");*/
     /*background-image: url("../images/earth.jpg");*/
 }
 
@@ -189,6 +190,9 @@ body ul li{
 }
 
 /*LP  NAVBAR*/
+.navbar-inverse{
+  border:none;
+}
       .navbar-collapse.target{
         background-color: #61afba;
       }

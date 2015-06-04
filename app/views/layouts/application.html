@@ -67,7 +67,7 @@
           <div class="title-title" style="float: left;">
             <div style="margin-top: 15px;">
               <%= link_to "SchoolChat", root_url, :style=>"font-size: 25px;" %>
-            <h9>東大生４人による国際教育に特化した学校口コミサイト</h9>
+            <h9>東大学生有志による国際教育に特化した学校口コミサイト</h9>
             </div>
           </div>
 
@@ -122,8 +122,8 @@
             <!-- <li><a href="">インター校・IBガイド</a></li> -->
             <!-- <li><a href="">留学ガイド</a></li> -->
             <!-- <li><a href="">インター/IBとは？</a></li> -->
-            <li><a href="">口コミを投稿</a></li>
-            <li><a href="">ABOUT US</a></li>
+            <li><%= link_to "口コミを投稿", welcome_submit_path %></li>
+            <li><%= link_to "ABOUT", welcome_about_path %></li>
             <%- if logged_in?%>
               <li><%= link_to "ログアウト", users_sign_out_path, :method=> :delete %></li>
             <%- else%>

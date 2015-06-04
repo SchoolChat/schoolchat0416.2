@@ -414,18 +414,6 @@ footer {
             color: #e7e8ec;
 }
 
-.menuLine{
-    margin: 0 0 10px 0;
-    padding: 17px;
-    border-width: 0 0 5px 0;
-    border-color: #f3ca9e;
-    border-style: solid;
-    background: #eca14f;
-    color: #f9f4ed;
-    line-height: 70%;
-    /*font-weight: bold;*/
-}
-
 .subject{
     float: left;
 }
@@ -644,7 +632,7 @@ li.detail-reviews-block{
 
 .menuline{
     margin: 0 0 0 0;
-    padding: 12px;
+    padding: 9px;
     border-width: 0 0 5px 0;
     border-color: #f3ca9e;
     border-style: solid;

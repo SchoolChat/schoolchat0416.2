@@ -136,6 +136,9 @@
 <div class="space10px"></div>
 <div class="space10px"></div>
 <div class="space10px"></div>
+
+  <%- if logged_in?%>
+  <%- else%>
         <div class="container2">
           <div class="register">
             <h3>新規登録</h3>
@@ -144,7 +147,7 @@
             <%= link_to "新規登録", new_registrations_path, :class=>"btn-signup btn btn-orange", :style=>"margin-top: 3px; margin-left: 10px; color: white" %>
           </div>
         </div>
-
+  <%end%>
       </div>
     </div>
 

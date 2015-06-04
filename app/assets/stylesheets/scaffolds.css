@@ -642,6 +642,7 @@ li.detail-reviews-block{
 .menuline{
     margin: 0 0 0 0;
     padding: 9px;
+    padding-left: 25px;
     border-width: 0 0 5px 0;
     border-color: #f3ca9e;
     border-style: solid;
@@ -657,6 +658,7 @@ li.detail-reviews-block{
 }
 .menuline1{
   margin: 0 0 0 0;
+  padding: 2px 0 10px 0;
   padding: 2px 8px;
   border-width: 0 0 0 25px;
   border-color: #3e838d;

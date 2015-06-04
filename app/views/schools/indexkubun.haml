@@ -93,41 +93,14 @@
       #my-tab-content.tab-content
         #1.tab-pane.active
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
-            /国内の学校ならば
-            / -tokyo = []
-            / -nottokyo = []
             -kokunai = []
             -kokunai = @schools.where(japan:true)
             / # -kokunai.order("location")
             -kokunai.each do |kokunai|
               / -if kokunai.location.include?("東京")
               - if kokunai.kindergarten == true
-                %h4.menuline 
+                %h4.menuline
                   = "幼稚園　"
-              - if kokunai.primary == true
-                %h4.menuline 
-                  = "小学校　"
-              - if kokunai.middle == true
-                %h4.menuline
-                  = "中学校　"
-              - if kokunai.high == true
-                %h4.menuline
-                  = "高校"
-
-                = link_to school_path(kokunai) do
-                  %h3.menuline1
-                    = kokunai.name
-                  %p.menuline2
-                    ="　場所："
-                    =kokunai.location[0,8]
-                    ="…/カリキュラム："
-                    =kokunai.program
-                    ="/口コミ数："
-                    =kokunai.comments.count
-                    ="区分："
-
-              -else
-                %h4.menuline 東京都以外
                 = link_to school_path(kokunai) do
                   %h3.menuline1
                     = kokunai.name
@@ -159,27 +132,111 @@
                     - else
                       - if kokunai.high == true
                         = "高"
-            / -tokyo.each do |tokyo|
-            /   %h3.menuline1
-            /     =tokyo.name
-            /   %p.menuline2
-            /     =tokyo.location[0,8]
-            /     ="…/カリキュラム："
-            /     =tokyo.program
-            /     ="/口コミ数："
-            /     =tokyo.comments.count
 
+              - if kokunai.primary == true
+                %h4.menuline
+                  = "小学校　"
+                = link_to school_path(kokunai) do
+                  %h3.menuline1
+                    = kokunai.name
+                  %p.menuline2
+                    ="　場所："
+                    =kokunai.location[0,8]
+                    ="…/カリキュラム："
+                    =kokunai.program
+                    ="/口コミ数："
+                    =kokunai.comments.count
+                    ="区分："
+                    - if kokunai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokunai.kindergarten == true
+                        = "幼"
+                    - if kokunai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokunai.primary == true
+                        = "小"
+                    - if kokunai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokunai.middle == true
+                        = "中"
+                    - if kokunai.high == nil
+                      = "no input"
+                    - else
+                      - if kokunai.high == true
+                        = "高"
+              - if kokunai.middle == true
+                %h4.menuline
+                  = "中学校　"
 
-            /   %h4.menuline 東京都でない
-            /   - nottokyo.each do |nottokyo|
-            /     %h3.menuline1
-            /       =nottokyo.name
-            /     %p.menuline2
-            /       =nottokyo.location[0,8]
-            /       ="…/カリキュラム："
-            /       =nottokyo.program
-            /       ="/口コミ数："
-            /       =nottokyo.comments.count
+                = link_to school_path(kokunai) do
+                  %h3.menuline1
+                    = kokunai.name
+                  %p.menuline2
+                    ="　場所："
+                    =kokunai.location[0,8]
+                    ="…/カリキュラム："
+                    =kokunai.program
+                    ="/口コミ数："
+                    =kokunai.comments.count
+                    ="区分："
+                    - if kokunai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokunai.kindergarten == true
+                        = "幼"
+                    - if kokunai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokunai.primary == true
+                        = "小"
+                    - if kokunai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokunai.middle == true
+                        = "中"
+                    - if kokunai.high == nil
+                      = "no input"
+                    - else
+                      - if kokunai.high == true
+                        = "高"
+              - if kokunai.high == true
+                %h4.menuline
+                  = "高校"
+
+                = link_to school_path(kokunai) do
+                  %h3.menuline1
+                    = kokunai.name
+                  %p.menuline2
+                    ="　場所："
+                    =kokunai.location[0,8]
+                    ="…/カリキュラム："
+                    =kokunai.program
+                    ="/口コミ数："
+                    =kokunai.comments.count
+                    ="区分："
+                    - if kokunai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokunai.kindergarten == true
+                        = "幼"
+                    - if kokunai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokunai.primary == true
+                        = "小"
+                    - if kokunai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokunai.middle == true
+                        = "中"
+                    - if kokunai.high == nil
+                      = "no input"
+                    - else
+                      - if kokunai.high == true
+                        = "高"
 
             .topspace
             .topspace

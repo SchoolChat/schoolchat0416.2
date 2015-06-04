@@ -191,7 +191,7 @@ body ul li{
 
 /*LP  NAVBAR*/
 .navbar-inverse{
-  border:none;
+  border:none!important;
 }
       .navbar-collapse.target{
         background-color: #61afba;

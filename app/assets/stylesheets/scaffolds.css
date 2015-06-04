@@ -191,7 +191,7 @@ body ul li{
 
 /*LP  NAVBAR*/
 .navbar-inverse{
-  border:none!important;
+  border:none !important;
 }
       .navbar-collapse.target{
         background-color: #61afba;
@@ -685,5 +685,5 @@ h3.menuline1 a:hover{
 
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
-  border:none;
+  border:none !important;
 }

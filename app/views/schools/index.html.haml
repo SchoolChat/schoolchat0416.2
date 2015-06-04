@@ -102,7 +102,7 @@
             -kokunai.each do |kokunai|
               / -if kokunai.location.include?("東京")
               -if kokunai.location == "東京都" || kokunai.location == "東京都品川区北品川5-12-4" || kokunai.location == "東京都武蔵野市西久保2-6-2" || kokunai.location == "東京都練馬区豊玉北4-29-11" || kokunai.location == "東京都世田谷区羽根木1-21-11" || kokunai.location == "東京都港区六本木6-16-5" || kokunai.location == "東京都港区三田3-4-22" || kokunai.location == "東京都港区元麻布2-14-7" || kokunai.location == "東京都新宿区四谷2-11-6" || kokunai.location == "東京都江東区白河1-5-15" || kokunai.location == "東京都江東区東陽2-2-20" || kokunai.location == "東京都品川区北品川5-8-20" || kokunai.location == "目黒校：東京都目黒区青葉台2-11-5" || kokunai.location == "東京都品川区上大崎2-7-16" || kokunai.location == "東京都目黒区自由ケ丘1-14-16" || kokunai.location == "東京都台東区浅草橋5-1-35" || kokunai.location == "東京都杉並区和泉1-19-14 B1"
-                %h4.menuline 東京都内
+                %h4.menuline 東京都
                 = link_to school_path(kokunai) do
                   %h4.menuline1
                     = kokunai.name
@@ -135,38 +135,110 @@
                       - if kokunai.high == true
                         = "高"
               -else
-                %h4.menuline 東京都以外
-                = link_to school_path(kokunai) do
-                  %h4.menuline1
-                    = kokunai.name
-                  %p.menuline2
-                    ="　場所："
-                    =kokunai.location[0,8]
-                    ="…/カリキュラム："
-                    =kokunai.program
-                    ="/口コミ数："
-                    =kokunai.comments.count
-                    ="区分："
-                    - if kokunai.kindergarten == nil
-                      = "no input"
-                    - else
-                      - if kokunai.kindergarten == true
-                        = "幼"
-                    - if kokunai.primary == nil
-                      = "no input"
-                    - else
-                      - if kokunai.primary == true
-                        = "小"
-                    - if kokunai.middle == nil
-                      = "no input"
-                    - else
-                      - if kokunai.middle == true
-                        = "中"
-                    - if kokunai.high == nil
-                      = "no input"
-                    - else
-                      - if kokunai.high == true
-                        = "高"
+                -if kokunai.location == "神奈川県横浜市都筑区茅ヶ崎南2-4-1" || kokunai.location=="神奈川県横須賀市小川町2"
+                  %h4.menuline 
+                  = link_to school_path(kokunai) do
+                    %h4.menuline1
+                      = kokunai.name
+                    %p.menuline2
+                      ="　場所："
+                      =kokunai.location[0,8]
+                      ="…/カリキュラム："
+                      =kokunai.program
+                      ="/口コミ数："
+                      =kokunai.comments.count
+                      ="区分："
+                      - if kokunai.kindergarten == nil
+                        = "no input"
+                      - else
+                        - if kokunai.kindergarten == true
+                          = "幼"
+                      - if kokunai.primary == nil
+                        = "no input"
+                      - else
+                        - if kokunai.primary == true
+                          = "小"
+                      - if kokunai.middle == nil
+                        = "no input"
+                      - else
+                        - if kokunai.middle == true
+                          = "中"
+                      - if kokunai.high == nil
+                        = "no input"
+                      - else
+                        - if kokunai.high == true
+                          = "高"
+                -else
+                  -if kokunai.location == "埼玉県所沢市松郷153"
+                    %h4.menuline 埼玉県
+                    = link_to school_path(kokunai) do
+                      %h4.menuline1
+                        = kokunai.name
+                      %p.menuline2
+                        ="　場所："
+                        =kokunai.location[0,8]
+                        ="…/カリキュラム："
+                        =kokunai.program
+                        ="/口コミ数："
+                        =kokunai.comments.count
+                        ="区分："
+                        - if kokunai.kindergarten == nil
+                          = "no input"
+                        - else
+                          - if kokunai.kindergarten == true
+                            = "幼"
+                        - if kokunai.primary == nil
+                          = "no input"
+                        - else
+                          - if kokunai.primary == true
+                            = "小"
+                        - if kokunai.middle == nil
+                          = "no input"
+                        - else
+                          - if kokunai.middle == true
+                            = "中"
+                        - if kokunai.high == nil
+                          = "no input"
+                        - else
+                          - if kokunai.high == true
+                            = "高"
+
+                  -else
+                    -if kokunai.location == "大阪府箕面市小野原西4-4-16" || kokunai.location =="大阪府大阪市港区弁天1-2-2-800"
+                      %h4.menuline 大阪府
+                      = link_to school_path(kokunai) do
+                        %h4.menuline1
+                          = kokunai.name
+                        %p.menuline2
+                          ="　場所："
+                          =kokunai.location[0,8]
+                          ="…/カリキュラム："
+                          =kokunai.program
+                          ="/口コミ数："
+                          =kokunai.comments.count
+                          ="区分："
+                          - if kokunai.kindergarten == nil
+                            = "no input"
+                          - else
+                            - if kokunai.kindergarten == true
+                              = "幼"
+                          - if kokunai.primary == nil
+                            = "no input"
+                          - else
+                            - if kokunai.primary == true
+                              = "小"
+                          - if kokunai.middle == nil
+                            = "no input"
+                          - else
+                            - if kokunai.middle == true
+                              = "中"
+                          - if kokunai.high == nil
+                            = "no input"
+                          - else
+                            - if kokunai.high == true
+                              = "高"
+
+
             / -tokyo.each do |tokyo|
             /   %h4.menuline1
             /     =tokyo.name

@@ -118,7 +118,7 @@ div {
     /*background-image: url("../images/earth.jpg");*/
 }
 
-.btn-signup{
+a.btn-signup{
   margin: 0 10px 15px 0;
   font-size: 18px;
 }
@@ -683,7 +683,10 @@ h3.menuline1 a:hover{
   padding: 0px;
 }
 
-
+/*しょうがない*/
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
   border:none !important;
 }
+
+a.btn-signup.btn.btn-orange{
+  margin:15px;

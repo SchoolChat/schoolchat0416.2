@@ -114,6 +114,7 @@ div {
     background-position: center center ;
     background-size: cover;
     background-image: url("earth.jpg");
+    /*background-image: url("../images/earth.jpg");*/
 }
 
 .btn-signup{
@@ -237,6 +238,7 @@ body ul li{
     color: #e7e8ec;
     background-color: #3c8e99;
 }
+
 @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
      border-color: #e7e8ec;
@@ -265,6 +267,7 @@ body ul li{
      background-color: transparent;
     }
 }
+
 .navbar-inverse .navbar-link {
     color: #9d9d9d;
 }

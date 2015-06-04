@@ -6,7 +6,9 @@ class WelcomeController < ApplicationController
   def about
     @user= current_user
   end
-
+  def contact
+    @user= current_user
+  end
   def submit
     @user= current_user
   end

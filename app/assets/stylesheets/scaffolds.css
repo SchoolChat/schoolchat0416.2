@@ -182,10 +182,6 @@ body ul li{
   background-color: white;
 }
 
-.area-search-title a.searchbyarea{
-  height: 70px;
-}
-
 .area-search-title a:hover{
   text-decoration: none;
 }
@@ -403,8 +399,8 @@ footer {
 
 
 .section {
-            background-color: #f9f4eb;
-            padding: 2em 0 3em;
+  background-color: #f9f4eb;
+  padding-top: 10px;
 }
 .box {
             background: #61aeba;
@@ -642,7 +638,10 @@ li.detail-reviews-block{
     /*font-weight: bold;*/
     /*text-align: center;*/
 }
-
+.menuline.searchbyarea{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .menuline1{
   margin: 0 0 0 0;
   padding: 2px 8px;

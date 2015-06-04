@@ -10,7 +10,7 @@
         <div class="container1">
           <div class="area-search">
             <div class="area-search-title" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="menuline searchbyarea"><%= link_to "地域別に学校を探す", schools_path %></div>
+              <div class="menuline searchbyarea"><%= link_to "地域別に学校を探す", schools_indexkubun_path %></div>
             </div>
             <!-- 地域名
             <div class="area-search-contents">
@@ -61,44 +61,51 @@
             </div>
           </div> -->
 
+          <div class="topspace"></div>
+          <div class="space10px"></div>
+          <div class="space10px"></div>
+          <div class="space10px"></div>
+
           <div class="course-list">
-            <h4 class="menuline">区分別に探す</h4>
+            <h4 class="menuline"><%= link_to "区分別に学校を探す", schools_path %></h4>
             <div class="section">
               <div class="container">
                 <div class="row">
                   <div class="col-xs-6 col-sm-6 col-md-3">
-                    <div class="item_img">
-                      <a href=""><%= image_tag("kinder-hover.jpg", :class=>"img-responsive") %></a>
-                    </div>
+                      <%= link_to image_tag("kinder-hover.jpg", :class=>"img-responsive"), schools_indexkubun_path %>
                   </div>
                   <div class="col-xs-6 col-sm-6 col-md-3">
-                    <div class="item_img">
-                      <a href=""><%= image_tag("primary-hover.jpg", :class=>"img-responsive") %></a>
-                    </div>
+                      <%= link_to image_tag("primary-hover.jpg", :class=>"img-responsive"), schools_indexkubun_path %>
                   </div>
                   <div class="col-xs-6 col-sm-6 col-md-3">
-                    <div class="item_img">
-                      <a href=""><%= image_tag("junior-hover.jpg", :class=>"img-responsive") %></a>
-                    </div>
+                      <%= link_to image_tag("junior-hover.jpg", :class=>"img-responsive"), schools_indexkubun_path %>
                   </div>
                   <div class="col-xs-6 col-sm-6 col-md-3">
-                    <div class="item_img">
-                      <a href=""><%= image_tag("high-hover.jpg", :class=>"img-responsive") %></a>
-                    </div>
+                      <%= link_to image_tag("high-hover.jpg", :class=>"img-responsive"), schools_indexkubun_path %>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="topspace"></div>
+          <div class="topspace"></div>
+          <div class="space10px"></div>
+          <div class="space10px"></div>
+          <div class="space10px"></div>
+          <div class="space10px"></div>
+
+
           <div class="curriculum-list">
             <h4 class="menuline">カリキュラム別に探す</h4>
+            <h4 class="menuline">COMING SOON....!</h4>
             <div class="section">
               <div class="container">
                 <div class="row">
                   <div class="col-xs-6 col-sm-3 col-md-3">
                     <div class="box clearfix">
                       <div class="item_img">
-                        <a href=""><%= image_tag("IBlogo.jpg", :style=>"width: 130px; height: 130px;") %></a>
+                        <%= image_tag("IBlogo.jpg", :style=>"width: 130px; height: 130px;") %>
                       </div>
                       <div class="col-xs-12 col-sm-12">
                         <h6>国際バカロレア</h6>
@@ -109,7 +116,7 @@
                     <div class="box clearfix">
                       <div class="col-xs-12 col-sm-12">
                         <div class="item_img">
-                          <a href=""><%= image_tag("TOEFLlogo.jpg", :style=>"width: 130px; height: 130px;") %></a>
+                          <%= image_tag("TOEFLlogo.jpg", :style=>"width: 130px; height: 130px;") %>
                         </div>
                       </div>
                       <div class="col-xs-12 col-sm-12">
@@ -121,7 +128,7 @@
                     <div class="box clearfix">
                       <div class="col-xs-12 col-sm-12">
                         <div class="item_img">
-                          <a href=""><%= image_tag("APlogo.jpg", :style=>"width: 130px; height: 130px;") %></a>
+                          <%= image_tag("APlogo.jpg", :style=>"width: 130px; height: 130px;") %>
                         </div>
                       </div>
                       <div class="col-xs-12 col-sm-12">
@@ -133,7 +140,7 @@
                     <div class="box clearfix">
                       <div class="col-xs-12 col-sm-12">
                         <div class="item_img">
-                          <a href=""><%= image_tag("SATlogo.jpg", :style=>"width: 130px; height: 130px;") %></a>
+                          <%= image_tag("SATlogo.jpg", :style=>"width: 130px; height: 130px;") %>
                         </div>
                       </div>
                       <div class="col-xs-12 col-sm-12">
@@ -147,10 +154,13 @@
           </div>
 
           <div class="school-list">
-            <a href=""><h4 class="menuLine" style="margin-bottom: 0px;">学校一覧へ<span class="caret"></span></h4></a>
+            <h4 class="menuline searchbyarea"><%= link_to "学校一覧へ", schools_path%></h4>
           </div>
 
+          <div class="space10px"></div>
+          <div class="space10px"></div>
           <div class="inter-and-IB">
+            <h4 class="menuline">経験した生徒による国際教育紹介</h4>
             <div class="row" style="padding-top: 30px;">
               <div class="about-inter">
                 <div class="col-xs-6 col-sm-3 col-sm-offset-2 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2">

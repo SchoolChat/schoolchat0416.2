@@ -47,23 +47,25 @@
   %p
     = f.text_field :eng_program
 
-
-
   %p
     = f.label :School_Type
   %p
-    = f.check_box :kindergarten
-    = "Kindergarten"
+    %label
+      = f.check_box :kindergarten
+      / # = f.check_box(:kindergarten, { :multiple => true }, true, false)
+      = "Kindergarten"
   %p
-    = f.check_box :primary
-    = "Primary School"
+    %label
+      = f.check_box :primary
+      = "Primary School"
   %p
-    = f.check_box :middle
-    = "Middle School"
+    %label
+      = f.check_box :middle
+      = "Middle School"
   %p
-    = f.check_box :high
-    = "High School"
-
+    %label
+      = f.check_box :high
+      = "High School"
   %p
     = f.submit
 

@@ -694,6 +694,13 @@ h3.menuline1 a:hover{
   padding: 0px;
 }
 
+/*口コミ入力・編集ページ comment new edit*/
+textarea{
+  width:90%;
+  height:300px;
+}
+
+
 /*しょうがない*/
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
   border:none !important;

@@ -18,6 +18,8 @@
 %p
   =@comment.created_at
 
+
+
 = form_for :comment, url: school_comment_path, method: :put do |f|
   %p
     ="口コミ内容："
@@ -29,3 +31,8 @@
 
   %p
     = f.submit'編集を保存'
+
+
+
+
+  =link_to '削除', school_comment_path(@school.id, @comment.id), method: :delete, data: { confirm: 'Are you sure?' }

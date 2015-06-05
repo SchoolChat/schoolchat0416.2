@@ -1,4 +1,10 @@
 class CommentsController < ApplicationController
+  def show
+    @user = current_user
+    @school = School.find(params[:school_id])
+    @comment = @school.comments.find(params[:id])
+    redirect_to school_path(@school)
+  end
 
   def create
     # render :nothing => true
@@ -32,6 +38,18 @@ class CommentsController < ApplicationController
       render 'edit'
     end
   end
+
+  def destroy
+    @user = current_user
+    @comment = @school.comments.find(params[:id])
+    raise
+    @comment.destroy
+    raise
+    respond_to do |format|
+      format.html { redirect_to school_url, notice: 'School was successfully destroyed.' }
+    end
+  end
+
 
   private
     def comment_params

@@ -64,24 +64,31 @@
             .row
               .person-picture.col-xs-4.col-sm-4.col-md-2.col-lg-2{:style => "float: left;"}
                 %a{:href => ""}
-                  %img.img-responsive
-                    / - image_tag("person.jpg", :style=>"width: 130px; height: 130px;")
-                    / {:src => "../assets/images/person.jpg", :style => "width: 70%; margin-bottom: 30px;"}
+                  / %img.img-responsive
+                  / - image_tag("person.jpg", :style=>"width: 130px; height: 130px;")
+                  / {:src => "../assets/images/person.jpg", :style => "width: 70%; margin-bottom: 30px;"}
               .balloon.col-xs-12.col-sm-12.col-md-10.col-lg-10{:style => "float: right;"}
                 %h
                 %p
-                  =auto_link(simple_format(c.content))
-                %p
-                  =c.created_at
-                -if logged_in?
-                  %p
-                    =link_to '編集', edit_school_comment_path(@school.id, c.id)
-
+                  -if logged_in?
+                    =auto_link(simple_format(c.content))
+                    %p
+                      =c.created_at
+                  -else
+                    =auto_link(simple_format(c.content[0,50]))
+                    ="　　　　　"
+                    ="....続きはログインしてご覧ください。"
 
               .balloon.profile.col-xs-8.col-sm-8.col-md-2.col-lg-2{:style => "float: left;"}
                 %h
-                  %i.fa.fa-user.fa-3x
+                  / %i.fa.fa-user.fa-3x  herokuエラーのため使えなかった。
                   =auto_link(simple_format(c.userdetail))
+              -if logged_in? && current_user.email=="haru.okaniwa@ezweb.ne.jp"
+                %p
+                  =link_to '　　この口コミを編集　　', edit_school_comment_path(@school.id, c.id)
+                  =link_to '削除', school_comment_path(@school.id, c.id), method: :delete, data: { confirm: 'Are you sure?' }
+
+                  / = link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' }
 
   .lineorange
   .lineyellow

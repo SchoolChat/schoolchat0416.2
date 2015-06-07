@@ -111,8 +111,9 @@
                   %p.menuline2
                     ="　場所："
                     =kokunai.location[0,8]
-                    ="…/カリキュラム："
-                    =kokunai.educationalprogram
+                    -if kokunai.educationalprogram.present?
+                      ="…/カリキュラム："
+                      =kokunai.educationalprogram
                     ="/口コミ数："
                     =kokunai.comments.count
                     ="区分："
@@ -145,8 +146,9 @@
                     %p.menuline2
                       ="　場所："
                       =kokunai.location[0,8]
-                      ="…/カリキュラム："
-                      =kokunai.educationalprogram
+                      -if kokunai.educationalprogram.present?
+                        ="…/カリキュラム："
+                        =kokunai.educationalprogram
                       ="/口コミ数："
                       =kokunai.comments.count
                       ="区分："
@@ -214,8 +216,9 @@
                         %p.menuline2
                           ="　場所："
                           =kokunai.location[0,8]
-                          ="…/カリキュラム："
-                          =kokunai.educationalprogram
+                          -if kokunai.educationalprogram.present?
+                            ="…/カリキュラム："
+                            =kokunai.educationalprogram
                           ="/口コミ数："
                           =kokunai.comments.count
                           ="区分："
@@ -258,8 +261,9 @@
                     =nottokyo.name
                   %p.menuline2
                     =nottokyo.location[0,8]
-                    ="…/カリキュラム："
-                    =nottokyo.educationalprogram
+                    -if nottokyo.educationalprogram.present?
+                      ="…/カリキュラム："
+                      =nottokyo.educationalprogram
                     ="/口コミ数："
                     =nottokyo.comments.count
 
@@ -282,8 +286,9 @@
                 %h4.menuline1
                   = kokugai.name
                 %p.menuline2
-                  ="カリキュラム："
-                  =kokugai.educationalprogram
+                  -if kokugai.educationalprogram.present?
+                    ="カリキュラム："
+                    =kokugai.educationalprogram
                   ="/口コミ数："
                   =kokugai.comments.count
                   ="区分："

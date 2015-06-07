@@ -114,8 +114,12 @@
                 %p.menuline2
                   ="　場所："
                   =kindergarten.location[0,8]
-                  ="…/カリキュラム："
-                  =kindergarten.educationalprogram
+                  -if kindergarten.educationalprogram.present?
+                    ="…/カリキュラム："
+                    =kindergarten.educationalprogram
+                  -if kindergarten.program.present?
+                    ="…/カリキュラム："
+                    =kindergarten.program
                   ="/口コミ数："
                   =kindergarten.comments.count
                   ="区分："
@@ -149,8 +153,12 @@
                 %p.menuline2
                   ="　場所："
                   =primary.location[0,8]
-                  ="…/カリキュラム："
-                  =primary.educationalprogram
+                  -if .educationalprogram.present?
+                    ="…/カリキュラム："
+                    =primary.educationalprogram
+                  -if .program.present?
+                    ="…/カリキュラム："
+                    =primary.program
                   ="/口コミ数："
                   =primary.comments.count
                   ="区分："
@@ -184,7 +192,8 @@
                 %p.menuline2
                   ="　場所："
                   =middle.location[0,8]
-                  ="…/カリキュラム："
+                  -if .educationalprogram.present?
+                    ="…/カリキュラム："
                   =middle.educationalprogram
                   ="/口コミ数："
                   =middle.comments.count
@@ -219,8 +228,9 @@
                 %p.menuline2
                   ="　場所："
                   =high.location[0,8]
-                  ="…/カリキュラム："
-                  =high.educationalprogram
+                  -if high.educationalprogram.present?
+                    ="…/カリキュラム："
+                    =high.educationalprogram
                   ="/口コミ数："
                   =high.comments.count
                   ="区分："
@@ -273,8 +283,9 @@
                 %p.menuline2
                   ="　場所："
                   =kindergarten.location[0,8]
-                  ="…/カリキュラム："
-                  =kindergarten.program
+                  -if kindergarten.educationalprogram.present?
+                    ="…/カリキュラム："
+                    =kindergarten.program
                   ="/口コミ数："
                   =kindergarten.comments.count
                   ="区分："
@@ -308,8 +319,9 @@
                 %p.menuline2
                   ="　場所："
                   =primary.location[0,8]
-                  ="…/カリキュラム："
-                  =primary.educationalprogram
+                  -if primary.educationalprogram.present?
+                    ="…/カリキュラム："
+                    =primary.educationalprogram
                   ="/口コミ数："
                   =primary.comments.count
                   ="区分："
@@ -343,8 +355,9 @@
                 %p.menuline2
                   ="　場所："
                   =middle.location[0,8]
-                  ="…/カリキュラム："
-                  =middle.educationalprogram
+                  -if middle.educationalprogram.present?
+                    ="…/カリキュラム："
+                    =middle.educationalprogram
                   ="/口コミ数："
                   =middle.comments.count
                   ="区分："
@@ -378,8 +391,9 @@
                 %p.menuline2
                   ="　場所："
                   =high.location[0,8]
-                  ="…/カリキュラム："
-                  =high.educationalprogram
+                  -if high.educationalprogram.present?
+                    ="…/カリキュラム："
+                    =high.educationalprogram
                   ="/口コミ数："
                   =high.comments.count
                   ="区分："

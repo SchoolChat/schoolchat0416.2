@@ -19,6 +19,9 @@ class CommentsController < ApplicationController
   def index
     @school = School.find(params[:school_id])
     @comments = @school.comments.all
+    @kokunai = @school.where(japan:true)
+
+    # @kokunailocation = @kokunai.location.scan(/.{1,#{3}}/)[0]
   end
 
   def edit

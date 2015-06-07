@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
     @school = School.find(params[:school_id])
     @comment = @school.comments.build(comment_params)
     if @comment.save
-      redirect_to root_path
+      redirect_to schools_path
     end
   end
 

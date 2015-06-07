@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :schools, through: :school_users
   has_many :comments
 
-  validates :name, presence: true, uniqueness: { case_sensitive: false }, length: { in: 4..24 }
+  validates :name, presence: true, uniqueness: { case_sensitive: false }, length: { in: 2..24 }
   validates :screen_name, length: { maximum: 140 }
   validates :bio, length: { maximum: 200  }
   validates :email, presence: true, uniqueness: { case_sensitive: false }

@@ -45,6 +45,11 @@
                 - if @school.high == true
                   = "高"
 
+          -if @school.educationalprogram.present?
+            %tr
+              %td 教育プログラム
+              %th
+                =@school.educationalprogram
 
   .container4
     .detail-reviews

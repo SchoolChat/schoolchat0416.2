@@ -153,10 +153,10 @@
                 %p.menuline2
                   ="　場所："
                   =primary.location[0,8]
-                  -if .educationalprogram.present?
+                  -if primary.educationalprogram.present?
                     ="…/カリキュラム："
                     =primary.educationalprogram
-                  -if .program.present?
+                  -if primary.program.present?
                     ="…/カリキュラム："
                     =primary.program
                   ="/口コミ数："
@@ -192,7 +192,7 @@
                 %p.menuline2
                   ="　場所："
                   =middle.location[0,8]
-                  -if .educationalprogram.present?
+                  -if middle.educationalprogram.present?
                     ="…/カリキュラム："
                   =middle.educationalprogram
                   ="/口コミ数："

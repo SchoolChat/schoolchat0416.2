@@ -3,6 +3,9 @@
   .alert.alert-danger= message
 
 .mainbody
+  .space10px
+  .space10px
+
   = link_to "ログインする", new_sessions_path
 
   = form_for @user, url: registrations_path, method: :post do |f|

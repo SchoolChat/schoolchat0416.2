@@ -168,7 +168,7 @@ body ul li{
       width: 100%;
       height: 2px;
       background-color: #F3CA9E;
-      margin-bottom: 15px;
+/*      margin-bottom: 15px;*/
     }
 
 .paddingleft10{
@@ -186,7 +186,7 @@ body ul li{
     }
     .space10px{
         display:block;
-        margin:10px 10px 10px 0;
+        padding:10px 10px 10px 0;
     }
 /*TOP WELCOMEindexTITLEタイトル*/
 .title-title h2 a:hover{

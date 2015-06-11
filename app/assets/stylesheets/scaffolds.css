@@ -561,6 +561,7 @@ li.detail-reviews-block{
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
     border-bottom-color: #fff;
+    /*background-color: red;*/
   }
 }
 .nav-pills > li {
@@ -615,6 +616,8 @@ li.detail-reviews-block{
   margin-right: 0;
   border-radius: 4px;
 }
+
+
 .nav-tabs-justified > .active > a,
 .nav-tabs-justified > .active > a:hover,
 .nav-tabs-justified > .active > a:focus {
@@ -704,4 +707,14 @@ textarea{
 /*しょうがない*/
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
   border:none !important;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: #ffffff;
+  cursor: default;
+  background-color: #eca14f !important;
+  border: 2px solid #eca14f !important;
+  border-bottom-color: transparent !important;
+  width: 150px;
+  text-align: center;
 }

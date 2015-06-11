@@ -710,11 +710,21 @@ textarea{
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: #ffffff;
+  color: white;
   cursor: default;
   background-color: #eca14f !important;
-  border: 2px solid #eca14f !important;
+  border: 3px solid #EAE7AA !important;
   border-bottom-color: transparent !important;
   width: 150px;
   text-align: center;
+}
+.nav-tabs > li > a {
+  color:white;
+  margin-right: 2px;
+  height: 50px;
+  border: 2px solid transparent !important;
+  border-radius: 10px 10px 0 0;
+  width: 150px;
+  text-align: center;
+  background-color: #F5BB92 !important;
 }

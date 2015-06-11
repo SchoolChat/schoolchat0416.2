@@ -51,6 +51,12 @@
               %th
                 =@school.educationalprogram
 
+          -if @school.hp.present?
+            %tr
+              %td 学校ホームページ
+              %th
+                =auto_link(simple_format(@school.hp))
+
   .container4
     .detail-reviews
       %h5

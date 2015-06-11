@@ -1,7 +1,11 @@
 / LISTING SCHOOLS
+.space10px
+.space10px
+.space10px
+
 %p
   = notice
-- if logged_in?&& current_user.email == "haru.okaniwa@ezweb.ne.jp" 
+- if logged_in?&& current_user.email == "haru.okaniwa@ezweb.ne.jp"
 
   %table
     %thead
@@ -71,13 +75,16 @@
             %td
               = link_to 'Edit', edit_school_path(school)
             %td
-              = link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' }
+              / # = link_to 'Destroy', school_delete_path(school), method: :delete, data: { confirm: 'Are you sure?' }
   %h2
     = link_to 'New School', new_school_path
 
 
 .mainbody
   = render "kensaku"
+
+  = render 'registerfornew'
+
   .row
     .tabbable
       #content

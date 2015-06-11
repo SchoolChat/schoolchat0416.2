@@ -1,4 +1,22 @@
 
+
+
+  .row
+    .tabbable
+      #content
+        %ul.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#1"}
+              %h4 国内
+          %li
+            %a{"data-toggle" => "tab", :href => "#2"}
+              %h4 国外
+      #my-tab-content.tab-content
+        #1.tab-pane.active
+
+
+        #2.tab-pane
+
 <div class="googleform" style="text-align: center;">
   <iframe src="https://docs.google.com/forms/d/1_mz7pZs_sF3rzb7bF-U-BQOS2oRR0RdM-ekC3Sn-G2s/viewform?embedded=true" width="80%" height="2800" frameborder="0" marginheight="0" marginwidth="0">読み込み中...</iframe>
 </div>

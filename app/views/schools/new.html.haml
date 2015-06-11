@@ -1,6 +1,12 @@
-.mainbody{:style => "margin: 30px;"}
-  %h5
-    New School
-  = link_to 'Back', schools_path
+.mainbody{:style => "padding: 30px;"}
+  .space10px
+  .space10px
+
+  %h3
+    新しい学校を登録する
+  %h3
+    = link_to '学校一覧へもどる', schools_path
+
+
   = render 'form'
-  = link_to 'Back', schools_path
+  = link_to '学校一覧へもどる', schools_path

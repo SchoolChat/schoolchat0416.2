@@ -8,42 +8,77 @@
 
   = link_to "ログインする", new_sessions_path
 
+  .registerbox{:style =>"text-align:center; margin-left: 20px; margin-right: 20px;"}
+    %h2
+      新規登録
+    %h4
+      会員様はすべての学校口コミをご覧いただけます。
+    %h4
+      もしお望みの学校の口コミがない場合、
+    %h4
+      おっしゃっていただいた学校の口コミを集めて、メールでお知らせいたします。
+    %h5
+      さらに、会員の皆様には、会員限定グループへのご招待、会員限定イベント等のご紹介をいたします。
+  .space10px
+
   = form_for @user, url: registrations_path, method: :post do |f|
     .input-box{:style => "text-align: center;"}
+
+
       %p
-      お名前
+      お知りになりたい学校名（あれば）：
+      %br
+      = f.text_field :schoolname, :placeholder => "〜アフタースクール、〜英語学校、~~スクールなど", :size => "40"
+
+      %p
+      お知りになりたい項目（あれば）：
+      %br
+      = f.text_field :schoolinfo, :placeholder => "トラブル対応、先生の質、英語サポートなど", :size => "40"
+
+      %p
+      お名前*
       %br
       = f.text_field :name, :placeholder => "山田花子"
       .space10px
       %br
-      メールアドレス
+      メールアドレス*
       %br
       = f.text_field :email, :placeholder => "example@example.com"
       .space10px
       %br
-      パスワード
+      パスワード*
       %br
       = f.password_field :password, :placeholder => "******"
       .space10px
       %br
-      パスワード(確認用)
+      パスワード(確認用)*
       %br
       = f.password_field :password_confirmation, :placeholder => "******"
       .space10px
       %br
-      お住まいの都道府県　または　国名
+      お住まいの都道府県　または　国名*
       %br
       = f.text_field :region, :placeholder => "東京都"
       .space10px
       %br
       お子様のご年齢
       %br
-      %input{:maxlength => "3", :name => "school-name", :size => "5", :type => "text"}
+      = f.text_field :childage, :size => "5"
       ="歳"
       .space10px
       .space10px
       %br
       = f.submit'登録する', :class => "btn-signup btn btn-orange"
+
+      %h5
+        ご登録いただいた会員様の情報はサイト運営および会員様への企画のためのみに、
+      %h5
+        代表・岡庭が責任を持って扱います。
+      %h5
+        お問い合わせはいつでも、お問い合わせフォームよりお受けしております。
+
+
+
 
 / = form_for @user, url: registrations_path, method: :post do |f|
 /   %table

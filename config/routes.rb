@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  # get '/schools/[:id]' => 'schools#destroy'
+
   resource :registrations, only: [:new, :create]
   resource :sessions, only: [:new, :create, :destroy]
   get '/users/sign_out' => 'sessions#destroy'

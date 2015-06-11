@@ -10,59 +10,62 @@
       - @school.errors.full_messages.each do |msg|
         %li= msg
   %p
-    = "School_Name"
+    = "学校の正式名"
   %p
     = f.text_field :name
   %p
-    = "School_Location"
+    = "学校の場所"
   %p
     = f.text_field :location
   %p
-    = f.check_box :japan
-    = "日本国内にある場合チェックする"
+    %label
+      = f.check_box :japan
+      = "日本国内にある場合チェックする"
   %p
-    = "Educational_Program_Name"
+    = "カリキュラム名"
   %p
     = f.text_field :educationalprogram
   %p
-    = "HomePage URL"
+    = "（IB, GCSE, AP, フランス公教育、日本公教育など)(複数並列可能）"
+  %p
+    = "公式サイトURL"
   %p
     = f.text_field :hp
 
+  / %p
+  /   = "------------------ENG--------------------"
+  / %p
+  /   = "ENG_School_Name"
+  / %p
+  /   = f.text_field :eng_name
+  / %p
+  /   = "ENG_Location"
+  / %p
+  /   = f.text_field :eng_location
+  / %p
+  /   = "ENG_program"
+  / %p
+  /   = f.text_field :eng_program
+  / = "-----------------------------------------"
   %p
-    = "------------------ENG--------------------"
-  %p
-    = "ENG_School_Name"
-  %p
-    = f.text_field :eng_name
-  %p
-    = "ENG_Location"
-  %p
-    = f.text_field :eng_location
-  %p
-    = "ENG_program"
-  %p
-    = f.text_field :eng_program
-  = "-----------------------------------------"
-  %p
-    = "School_Type"
+    = "学校区分"
   %p
     %label
       = f.check_box :kindergarten
       / # = f.check_box(:kindergarten, { :multiple => true }, true, false)
-      = "Kindergarten"
+      = "幼稚園・保育園"
   %p
     %label
       = f.check_box :primary
-      = "Primary School"
+      = "小学校"
   %p
     %label
       = f.check_box :middle
-      = "Middle School"
+      = "中学校"
   %p
     %label
       = f.check_box :high
-      = "High School"
+      = "高校"
 
   / %label.checkbox{ :for => "send_email" }
   /     = f.check_box :send_email, 

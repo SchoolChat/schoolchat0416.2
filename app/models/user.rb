@@ -13,5 +13,5 @@ class User < ActiveRecord::Base
   validates :schoolname, length: { maximum: 60 }
   validates :schoolinfo, length: { maximum: 200 }
   validates :childage, length: { maximum: 2 }
-  validates :region, presence: true, length: { maximum: 2 }
+  validates :region, presence: true, length: { maximum: 20 }
 end

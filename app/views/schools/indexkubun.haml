@@ -113,6 +113,8 @@
             -kindergarten.each do |kindergarten|
               = link_to school_path(kindergarten) do
                 %h4.menuline1
+                  = kindergarten.location[0,3]
+                  ="：　"
                   = kindergarten.name
                 %p.menuline2
                   ="　場所："
@@ -152,6 +154,8 @@
             -primary.each do |primary|
               = link_to school_path(primary) do
                 %h4.menuline1
+                  = primary.location[0,3]
+                  ="：　"
                   = primary.name
                 %p.menuline2
                   ="　場所："
@@ -191,6 +195,8 @@
             -middle.each do |middle|
               = link_to school_path(middle) do
                 %h4.menuline1
+                  = middle.location[0,3]
+                  ="：　"
                   = middle.name
                 %p.menuline2
                   ="　場所："
@@ -227,6 +233,8 @@
             -high.each do |high|
               = link_to school_path(high) do
                 %h4.menuline1
+                  = high.location[0,3]
+                  ="：　"
                   = high.name
                 %p.menuline2
                   ="　場所："

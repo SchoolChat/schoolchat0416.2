@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/about'
   get 'welcome/submit'
   get 'welcome/contact'
+  get 'welcome/news'
   resources :schools do
     resources :comments
   end

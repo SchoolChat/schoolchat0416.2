@@ -704,6 +704,41 @@ textarea{
 }
 
 
+
+
+
+/*イベント個別申し込みページ*/
+
+.transparentboxtop{
+  background-color: rgba(242, 224, 190, 0.68);
+  padding: 30px;
+}
+
+.transparentboxoutline{
+  background-color: rgba(236, 215, 200, 0.62);
+  padding: 30px;
+}
+
+
+.transparentboxpeople{
+  background-color: rgba(236, 215, 200, 0.62);
+  padding: 30px;
+}
+
+.transparentboxprogram{
+  background-color: rgba(236, 215, 200, 0.62);
+  padding: 30px;
+}
+
+.prices{
+  padding:0 30% 0 40%;
+  background-color: rgb(141, 206, 215);
+}
+
+.intro-headernews{
+  padding-top: 5%;
+}
+
 /*しょうがない*/
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
   border:none !important;

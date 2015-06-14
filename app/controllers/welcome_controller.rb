@@ -13,5 +13,8 @@ class WelcomeController < ApplicationController
   def submit
     @user= current_user
   end
+  def news
+    @user= current_user
+  end
 
 end

@@ -731,13 +731,16 @@ textarea{
 }
 
 .prices{
-  padding:0 30% 0 40%;
+  padding:0 20% 0 20%;
   background-color: rgb(141, 206, 215);
 }
-
+.prices td{
+  min-width: 100px;
+}
 .intro-headernews{
   padding-top: 5%;
 }
+
 
 /*しょうがない*/
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{

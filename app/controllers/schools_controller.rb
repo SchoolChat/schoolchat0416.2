@@ -9,7 +9,7 @@ class SchoolsController < ApplicationController
   end
 
   def indexkubun
-    @schools = School.all
+    @schools = School.order(:location)
     @user = current_user
   end
 

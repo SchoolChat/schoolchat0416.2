@@ -79,8 +79,9 @@
 
 .mainbody
   = render "kensaku"
-
-  = render 'registerfornew'
+  -if logged_in?
+  -else
+    = render 'registerfornew'
 
   .row
     .tabbable

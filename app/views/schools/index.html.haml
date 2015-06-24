@@ -384,6 +384,46 @@
                       - else
                         - if kokunai.high == true
                           = "高"
+
+            %h5.menuline 兵庫県
+            -kokunai.each do |kokunai|
+              -if kokunai.comments.count == 0
+              -else
+                -if kokunai.location == "兵庫県神戸市中央区中山手通3-17-2"
+                  = link_to school_path(kokunai) do
+                    %h4.menuline1
+                      = kokunai.location[0,3]
+                      ="：　"
+                      = kokunai.name
+                    %p.menuline2
+                      ="　場所："
+                      =kokunai.location[0,8]
+                      -if kokunai.educationalprogram.present?
+                        ="…/カリキュラム："
+                        =kokunai.educationalprogram
+                      ="/口コミ数："
+                      =kokunai.comments.count
+                      ="区分："
+                      - if kokunai.kindergarten == nil
+                        = "no input"
+                      - else
+                        - if kokunai.kindergarten == true
+                          = "幼"
+                      - if kokunai.primary == nil
+                        = "no input"
+                      - else
+                        - if kokunai.primary == true
+                          = "小"
+                      - if kokunai.middle == nil
+                        = "no input"
+                      - else
+                        - if kokunai.middle == true
+                          = "中"
+                      - if kokunai.high == nil
+                        = "no input"
+                      - else
+                        - if kokunai.high == true
+                          = "高"
             .topspace
             .topspace
             .topspace

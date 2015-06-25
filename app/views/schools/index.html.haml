@@ -492,42 +492,6 @@
                         = "高"
 
 
-            %h4.menuline イギリス　ロンドン
-            -kokugai.each do |kokugai|
-              / -if kokugai.comments.count == 0
-              / -else
-              -if kokugai.location == "イギリス　ロンドン"
-                = link_to school_path(kokugai) do
-                  %h4.menuline1
-                    = kokugai.name
-                  %p.menuline2
-                    -if kokugai.educationalprogram.present?
-                      ="カリキュラム："
-                      =kokugai.educationalprogram
-                    ="/口コミ数："
-                    =kokugai.comments.count
-                    ="区分："
-                    - if kokugai.kindergarten == nil
-                      = "no input"
-                    - else
-                      - if kokugai.kindergarten == true
-                        = "幼"
-                    - if kokugai.primary == nil
-                      = "no input"
-                    - else
-                      - if kokugai.primary == true
-                        = "小"
-                    - if kokugai.middle == nil
-                      = "no input"
-                    - else
-                      - if kokugai.middle == true
-                        = "中"
-                    - if kokugai.high == nil
-                      = "no input"
-                    - else
-                      - if kokugai.high == true
-                        = "高"
-
 
 
             %h4.menuline イギリス　他

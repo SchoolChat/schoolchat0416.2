@@ -673,7 +673,7 @@ li.detail-reviews-block{
   background-color: #61aeba;
   color: #fff;
   line-height: 140%;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 h3.menuline1 a:hover{
   text-decoration: none;

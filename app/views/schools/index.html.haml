@@ -103,15 +103,13 @@
             -kokunai = []
             -kokunai = @schools.where(japan:true)
 
-            %h5.menuline 東京都
+            %h4.menuline 東京都
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
               -else
                 -if kokunai.location == "東京都" || kokunai.location == "東京都品川区北品川5-12-4" || kokunai.location == "東京都世田谷区羽根木1-21-11" || kokunai.location == "東京都港区六本木6-16-5" || kokunai.location == "東京都港区元麻布2-14-7" || kokunai.location == "東京都江東区白河1-5-15" || kokunai.location == "東京都品川区北品川5-8-20" || kokunai.location == "目黒校：東京都目黒区青葉台2-11-5" || kokunai.location == "東京都品川区上大崎2-7-16" || kokunai.location == "東京都杉並区和泉1-19-14 B1" || kokunai.location == "東京都豊島区南池袋3-18-32" || kokunai.location == "東京都武蔵野市吉祥寺北町3-3-1" || kokunai.location == "東京都港区南麻布5-1-14" || kokunai.location == "東京都港区白金台5-13-39" || kokunai.location == "東京都町田市玉川学園6-1-1"
                   = link_to school_path(kokunai) do
                     %h4.menuline1
-                      = kokunai.location[0,3]
-                      ="：　"
                       = kokunai.name
                     %p.menuline2
                       ="　場所："
@@ -144,15 +142,13 @@
                           = "高"
 
 
-            %h5.menuline 神奈川県
+            %h4.menuline 神奈川県
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
               -else
                 -if kokunai.location=="神奈川県横浜市 中区山手町" || kokunai.location=="神奈川県茅ヶ崎市共恵1－6－20" || kokunai.location=="神奈川県横浜市都筑区茅ヶ崎南2-4-1" || kokunai.location=="神奈川県横須賀市"  || kokunai.location=="神奈川県横須賀市秋谷4427-1"
                   = link_to school_path(kokunai) do
                     %h4.menuline1
-                      = kokunai.location[0,3]
-                      ="：　"
                       = kokunai.name
                     %p.menuline2
                       ="　場所："
@@ -185,15 +181,13 @@
                           = "高"
 
 
-            %h5.menuline 埼玉県
+            %h4.menuline 埼玉県
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
               -else
                 -if kokunai.location == "埼玉県所沢市松郷153"
                   = link_to school_path(kokunai) do
                     %h4.menuline1
-                      = kokunai.location[0,3]
-                      ="：　"
                       = kokunai.name
                     %p.menuline2
                       ="　場所："
@@ -224,15 +218,13 @@
                         - if kokunai.high == true
                           = "高"
 
-            %h5.menuline 大阪府
+            %h4.menuline 大阪府
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
               -else
                 -if kokunai.location == "大阪府箕面市小野原西4-4-16"
                   = link_to school_path(kokunai) do
                     %h4.menuline1
-                      = kokunai.location[0,3]
-                      ="：　"
                       = kokunai.name
                     %p.menuline2
                       ="　場所："
@@ -264,15 +256,13 @@
                         - if kokunai.high == true
                           = "高"
 
-            %h5.menuline 群馬県
+            %h4.menuline 群馬県
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
               -else
                 -if kokunai.location == "群馬県太田市西本町69-1"
                   = link_to school_path(kokunai) do
                     %h4.menuline1
-                      = kokunai.location[0,3]
-                      ="：　"
                       = kokunai.name
                     %p.menuline2
                       ="　場所："
@@ -304,7 +294,7 @@
                         - if kokunai.high == true
                           = "高"
 
-            %h5.menuline 長野県
+            %h4.menuline 長野県
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
               -else
@@ -313,8 +303,6 @@
 
                   = link_to school_path(kokunai) do
                     %h4.menuline1
-                      = kokunai.location[0,3]
-                      ="：　"
                       = kokunai.name
                     %p.menuline2
                       ="　場所："
@@ -345,15 +333,13 @@
                       - else
                         - if kokunai.high == true
                           = "高"
-            %h5.menuline 広島県
+            %h4.menuline 広島県
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
               -else
                 -if kokunai.location == "広島県広島市安佐北区倉掛３丁目４９−１"
                   = link_to school_path(kokunai) do
                     %h4.menuline1
-                      = kokunai.location[0,3]
-                      ="：　"
                       = kokunai.name
                     %p.menuline2
                       ="　場所："
@@ -385,15 +371,13 @@
                         - if kokunai.high == true
                           = "高"
 
-            %h5.menuline 兵庫県
+            %h4.menuline 兵庫県
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
               -else
                 -if kokunai.location == "兵庫県神戸市中央区中山手通3-17-2"
                   = link_to school_path(kokunai) do
                     %h4.menuline1
-                      = kokunai.location[0,3]
-                      ="：　"
                       = kokunai.name
                     %p.menuline2
                       ="　場所："
@@ -432,16 +416,16 @@
 
         #2.tab-pane
           -kokugai = []
-          -kokugai = @schools.where(japan:false)
+          -kokugai = @schools.except(japan:true)
+          %h4.menuline アメリカ
           -kokugai.each do |kokugai|
-            / -if kokunai.location.include?("東京")
-            / -if kokugai.location == "Hamburg" || kokugai.location == "Singapore" || kokugai.location == "San Diego" || kokugai.location == "Bangkok" || kokugai.location == "Madagascar"|| kokugai.location == "Beijing" || kokugai.location == "Brussels" || kokugai.location == "Burnaby"
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12
-              %h5.menuline
-                =kokugai.location
-              = link_to school_path(kokugai) do
-                %h4.menuline1
-                  = kokugai.name
+            -if kokugai.comments.count == 0
+            -else
+              -if kokugai.location == "アメリカ" || kokugai.location == "アメリカ　カリフォルニア州"
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                  = link_to school_path(kokugai) do
+                    %h4.menuline1
+                      = kokugai.name
                 %p.menuline2
                   -if kokugai.educationalprogram.present?
                     ="カリキュラム："
@@ -469,11 +453,11 @@
                   - else
                     - if kokugai.high == true
                       = "高"
-            .topspace
-            .topspace
-            .topspace
-            .topspace
-            .topspace
+        .topspace
+        .topspace
+        .topspace
+        .topspace
+        .topspace
 
 
   .school-list

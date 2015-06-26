@@ -107,7 +107,7 @@
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
               -else
-                -if kokunai.location == "東京都" || kokunai.location == "東京都品川区北品川5-12-4" || kokunai.location == "東京都世田谷区羽根木1-21-11" || kokunai.location == "東京都港区六本木6-16-5" || kokunai.location == "東京都港区元麻布2-14-7" || kokunai.location == "東京都江東区白河1-5-15" || kokunai.location == "東京都品川区北品川5-8-20" || kokunai.location == "目黒校：東京都目黒区青葉台2-11-5" || kokunai.location == "東京都品川区上大崎2-7-16" || kokunai.location == "東京都杉並区和泉1-19-14 B1" || kokunai.location == "東京都豊島区南池袋3-18-32" || kokunai.location == "東京都武蔵野市吉祥寺北町3-3-1" || kokunai.location == "東京都港区南麻布5-1-14" || kokunai.location == "東京都港区白金台5-13-39" || kokunai.location == "東京都町田市玉川学園6-1-1"
+                -if kokunai.location == "東京都" || kokunai.location == "東京都品川区北品川5-12-4" || kokunai.location == "東京都世田谷区羽根木1-21-11" || kokunai.location == "東京都港区六本木6-16-5" || kokunai.location == "東京都港区元麻布2-14-7" || kokunai.location == "東京都江東区白河1-5-15" || kokunai.location == "東京都品川区北品川5-8-20" || kokunai.location == "目黒校：東京都目黒区青葉台2-11-5" || kokunai.location == "東京都品川区上大崎2-7-16" || kokunai.location == "東京都杉並区和泉1-19-14 B1" || kokunai.location == "東京都豊島区南池袋3-18-32" || kokunai.location == "東京都武蔵野市吉祥寺北町3-3-1" || kokunai.location == "東京都港区南麻布5-1-14" || kokunai.location == "東京都港区白金台5-13-39" || kokunai.location == "東京都町田市玉川学園6-1-1" || kokunai.location == "東京都練馬区東大泉５丁目２２－２１" || kokunai.location == "東京都目黒区駒場2-19-59" || kokunai.location == "東京都練馬区東大泉５丁目２２－２１"
                   = link_to school_path(kokunai) do
                     %h4.menuline1
                       = kokunai.name
@@ -421,13 +421,13 @@
 
             %h4.menuline シンガポール
             -kokugai.each do |kokugai|
-              / -if kokugai.comments.count == 0
-              / -else
               -if kokugai.location == "シンガポール"
                 = link_to school_path(kokugai) do
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -457,13 +457,13 @@
 
             %h4.menuline イギリス　ロンドン
             -kokugai.each do |kokugai|
-              / -if kokugai.comments.count == 0
-              / -else
               -if kokugai.location == "イギリス　ロンドン"
                 = link_to school_path(kokugai) do
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -501,6 +501,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -536,6 +538,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -570,6 +574,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -606,6 +612,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -642,6 +650,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -677,6 +687,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -712,6 +724,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -746,6 +760,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -780,6 +796,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -814,6 +832,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -849,6 +869,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -884,6 +906,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -919,6 +943,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -954,6 +980,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -989,6 +1017,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -1025,6 +1055,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -1060,6 +1092,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -1096,6 +1130,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -1131,6 +1167,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram
@@ -1166,6 +1204,8 @@
                   %h4.menuline1
                     = kokugai.name
                   %p.menuline2
+                    =kokugai.location
+                    ="　"
                     -if kokugai.educationalprogram.present?
                       ="カリキュラム："
                       =kokugai.educationalprogram

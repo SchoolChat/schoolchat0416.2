@@ -256,6 +256,83 @@
                         - if kokunai.high == true
                           = "高"
 
+            %h4.menuline 長野県
+            -kokunai.each do |kokunai|
+              -if kokunai.comments.count == 0
+              -else
+                -if kokunai.location == "長野県北佐久郡軽井沢町長倉"
+                  = link_to school_path(kokunai) do
+                    %h4.menuline1
+                      = kokunai.name
+                    %p.menuline2
+                      ="　場所："
+                      =kokunai.location[0,8]
+                      -if kokunai.educationalprogram.present?
+                        ="…/カリキュラム："
+                        =kokunai.educationalprogram
+                      ="/口コミ数："
+                      =kokunai.comments.count
+                      ="区分："
+                      - if kokunai.kindergarten == nil
+                        = "no input"
+                      - else
+                        - if kokunai.kindergarten == true
+                          = "幼"
+                      - if kokunai.primary == nil
+                        = "no input"
+                      - else
+                        - if kokunai.primary == true
+                          = "小"
+                      - if kokunai.middle == nil
+                        = "no input"
+                      - else
+                        - if kokunai.middle == true
+                          = "中"
+                      - if kokunai.high == nil
+                        = "no input"
+                      - else
+                        - if kokunai.high == true
+                          = "高"
+
+            %h4.menuline 静岡県
+            -kokunai.each do |kokunai|
+              -if kokunai.comments.count == 0
+              -else
+                -if kokunai.location == "静岡県沼津市岡宮１３６１−１"
+                  = link_to school_path(kokunai) do
+                    %h4.menuline1
+                      = kokunai.name
+                    %p.menuline2
+                      ="　場所："
+                      =kokunai.location[0,8]
+                      -if kokunai.educationalprogram.present?
+                        ="…/カリキュラム："
+                        =kokunai.educationalprogram
+                      ="/口コミ数："
+                      =kokunai.comments.count
+                      ="区分："
+                      - if kokunai.kindergarten == nil
+                        = "no input"
+                      - else
+                        - if kokunai.kindergarten == true
+                          = "幼"
+                      - if kokunai.primary == nil
+                        = "no input"
+                      - else
+                        - if kokunai.primary == true
+                          = "小"
+                      - if kokunai.middle == nil
+                        = "no input"
+                      - else
+                        - if kokunai.middle == true
+                          = "中"
+                      - if kokunai.high == nil
+                        = "no input"
+                      - else
+                        - if kokunai.high == true
+                          = "高"
+
+
             %h4.menuline 群馬県
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0
@@ -294,45 +371,6 @@
                         - if kokunai.high == true
                           = "高"
 
-            %h4.menuline 長野県
-            -kokunai.each do |kokunai|
-              -if kokunai.comments.count == 0
-              -else
-                -if kokunai.location == "長野県北佐久郡軽井沢町長倉"
-
-
-                  = link_to school_path(kokunai) do
-                    %h4.menuline1
-                      = kokunai.name
-                    %p.menuline2
-                      ="　場所："
-                      =kokunai.location[0,8]
-                      -if kokunai.educationalprogram.present?
-                        ="…/カリキュラム："
-                        =kokunai.educationalprogram
-                      ="/口コミ数："
-                      =kokunai.comments.count
-                      ="区分："
-                      - if kokunai.kindergarten == nil
-                        = "no input"
-                      - else
-                        - if kokunai.kindergarten == true
-                          = "幼"
-                      - if kokunai.primary == nil
-                        = "no input"
-                      - else
-                        - if kokunai.primary == true
-                          = "小"
-                      - if kokunai.middle == nil
-                        = "no input"
-                      - else
-                        - if kokunai.middle == true
-                          = "中"
-                      - if kokunai.high == nil
-                        = "no input"
-                      - else
-                        - if kokunai.high == true
-                          = "高"
             %h4.menuline 広島県
             -kokunai.each do |kokunai|
               -if kokunai.comments.count == 0

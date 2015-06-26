@@ -496,7 +496,7 @@
 
             %h4.menuline イギリス　他
             -kokugai.each do |kokugai|
-              -if kokugai.location == "イギリス　ウェールズ" || kokugai.location == "イギリス　ブリストル"
+              -if kokugai.location == "イギリス　ウェールズ" || kokugai.location == "イギリス　ブリストル" || kokugai.location == "イギリス　ハートフォードシャー"
                 = link_to school_path(kokugai) do
                   %h4.menuline1
                     = kokugai.name
@@ -529,7 +529,7 @@
                         = "高"
 
 
-            %h4.menuline アメリカ
+            %h4.menuline 北米：アメリカ
             -kokugai.each do |kokugai|
               -if kokugai.location == "アメリカ　サンディエゴ" || kokugai.location == "アメリカ　マサチューセッツ州" || kokugai.location == "アメリカ　ウィスコンシン州" || kokugai.location == "アメリカ　カリフォルニア州" || kokugai.location == "アメリカ　ニューメキシコ州" || kokugai.location == "  アメリカ　インディアナ州" || kokugai.location == "アメリカ　コネチカット州" || kokugai.location == "アメリカ　ニューヨーク州" || kokugai.location == "アメリカ　イリノイ州" || kokugai.location == "アメリカ　オレゴン州" || kokugai.location == "アメリカ　コロラド州" || kokugai.location == "アメリカ　テネシー州" || kokugai.location == "アメリカ　ミシガン州"
                 = link_to school_path(kokugai) do
@@ -563,38 +563,640 @@
                       - if kokugai.high == true
                         = "高"
 
-            / %h4.menuline 
-            / -kokugai.each do |kokugai|
-            /   -if kokugai.location == 
-            /       %h4.menuline1
-            /         = kokugai.name
-            /       %p.menuline2
-            /         -if kokugai.educationalprogram.present?
-            /           ="カリキュラム："
-            /           =kokugai.educationalprogram
-            /         ="/口コミ数："
-            /         =kokugai.comments.count
-            /         ="区分："
-            /         - if kokugai.kindergarten == nil
-            /           = "no input"
-            /         - else
-            /           - if kokugai.kindergarten == true
-            /             = "幼"
-            /         - if kokugai.primary == nil
-            /           = "no input"
-            /         - else
-            /           - if kokugai.primary == true
-            /             = "小"
-            /         - if kokugai.middle == nil
-            /           = "no input"
-            /         - else
-            /           - if kokugai.middle == true
-            /             = "中"
-            /         - if kokugai.high == nil
-            /           = "no input"
-            /         - else
-            /           - if kokugai.high == true
-            /             = "高"
+            %h4.menuline 北米：カナダ
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "カナダ　アルバータ" || kokugai.location == "カナダ　バーナビー" || kokugai.location == "カナダ　バンクーバー" ||kokugai.location == "カナダ　ヴィクトリア" || kokugai.location == "カナダ　ブリティッシュコロンビア州" || kokugai.location == "カナダ　オンタリオ州"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+
+            %h4.menuline アジア：タイ　バンコク
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "タイ　バンコク"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+
+            %h4.menuline アジア：インドネシア　ジャカルタ
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "インドネシア　ジャカルタ"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline アジア：中国・香港・韓国
+            -kokugai.each do |kokugai|
+              -if kokugai.location == " 中国　上海" ||kokugai.location == "中国　北京" || kokugai.location =="中国　天津" ||kokugai.location == "韓国　ソウル" ||kokugai.location == "大韓民国　京畿道"|| kokugai.location == "香港"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline アジア：ベトナム
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "ベトナム　ハノイ"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+            %h4.menuline アジア：マレーシア
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "マレーシア　クアラルンプール"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+            %h4.menuline アジア：ラオス
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "ラオス　ビエンチャン"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+            %h4.menuline 欧州：ドイツ
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "ドイツ　フランクフルト" || kokugai.location == "ドイツ　デュッセルドルフ" || kokugai.location == "ドイツ　ハンブルグ"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline 欧州：オランダ
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "オランダ　ロッテルダム" || kokugai.location == "オランダ　アムステルダム" || kokugai.location == "オランダ　ヒルフェルスム"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline 欧州：フランス
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "フランス　パリ"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline 欧州：スイス　ジュネーブ
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "スイス　ジュネーブ"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline 欧州：ベルギー
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "ベルギー　ブリュッセル"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline 欧州：ルクセンブルグ
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "ルクセンブルク"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+
+            %h4.menuline 南半球：オーストラリア
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "オーストラリア　シドニー"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline 南半球：ニュージーランド
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "ニュージーランド　ダニーデン"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+
+            %h4.menuline 中東：トルコ
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "トルコ　イスタンブール"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline 中東：イスラエル
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "イスラエル　ジャッファ"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+            %h4.menuline 他：マダガスカル
+            -kokugai.each do |kokugai|
+              -if kokugai.location == "マダガスカル"
+                = link_to school_path(kokugai) do
+                  %h4.menuline1
+                    = kokugai.name
+                  %p.menuline2
+                    -if kokugai.educationalprogram.present?
+                      ="カリキュラム："
+                      =kokugai.educationalprogram
+                    ="/口コミ数："
+                    =kokugai.comments.count
+                    ="区分："
+                    - if kokugai.kindergarten == nil
+                      = "no input"
+                    - else
+                      - if kokugai.kindergarten == true
+                        = "幼"
+                    - if kokugai.primary == nil
+                      = "no input"
+                    - else
+                      - if kokugai.primary == true
+                        = "小"
+                    - if kokugai.middle == nil
+                      = "no input"
+                    - else
+                      - if kokugai.middle == true
+                        = "中"
+                    - if kokugai.high == nil
+                      = "no input"
+                    - else
+                      - if kokugai.high == true
+                        = "高"
+
+
+
+
+
         .topspace
         .topspace
         .topspace

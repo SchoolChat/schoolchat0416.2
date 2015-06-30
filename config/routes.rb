@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'welcome/submit'
   get 'welcome/contact'
   get 'welcome/news'
+  get 'welcome/files'
   resources :schools do
     resources :comments
   end
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   resource :registrations, only: [:new, :create]
   resource :sessions, only: [:new, :create, :destroy]
   get '/users/sign_out' => 'sessions#destroy'
+
   root to: 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

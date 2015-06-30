@@ -17,4 +17,7 @@ class WelcomeController < ApplicationController
     @user= current_user
   end
 
+  def files
+    @user= current_user
+  end
 end

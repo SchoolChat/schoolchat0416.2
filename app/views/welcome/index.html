@@ -1,12 +1,11 @@
     <div class="intro-header" style="background-image:url(<%= asset_path "earth.jpg" %>)">
       <div class="intro-message" >
 
-        <%- if logged_in?%>
-        <%- else%>
-          <%= link_to "口コミを読む", schools_path,:class=>"btn-signup btn btn-orange", :style=>"color: white;"%>
-        <%end %>
+      <%= link_to "IB資料を見る", welcome_files_path,:class=>"btn-signup btn btn-danger", :style=>"color: white;"%>
 
-        <%= link_to "口コミを書く", welcome_submit_path,:class=>"btn-signup btn btn-orange", :style=>"color: white;"%>
+      <%= link_to "口コミを読む", schools_path,:class=>"btn-signup btn btn-orange", :style=>"color: white;"%>
+
+      <%= link_to "口コミを書く", welcome_submit_path,:class=>"btn-signup btn btn-orange", :style=>"color: white;"%>
       </div>
     </div>
 

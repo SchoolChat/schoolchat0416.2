@@ -730,12 +730,10 @@ textarea{
   padding: 30px;
 }
 
-.prices{
-  padding:0 20% 0 20%;
-  background-color: rgb(141, 206, 215);
-}
-.prices td{
-  min-width: 100px;
+.setheading{
+  padding:5px 5% 5px 5%;
+  color: white;
+  background-color: rgb(216, 132, 36);
 }
 .intro-headernews{
   padding-top: 5%;

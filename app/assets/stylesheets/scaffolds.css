@@ -744,7 +744,17 @@ textarea{
   padding-left: 20%;
 }
 
+/*files*/
+.files ul li{
+  margin-left: 20px;
+}
+.files a{
+  color: blue;
+  margin-left: 20px;
+}
+}
 /*しょうがない*/
+
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
   border:none !important;
 }

@@ -745,14 +745,13 @@ textarea{
 }
 
 /*files*/
-.files ul li{
-  margin-left: 20px;
+.files{
+  padding-left: 20px;
 }
 .files a{
-  color: blue;
-  margin-left: 20px;
+  color: rgb(10, 80, 208);
 }
-}
+
 /*しょうがない*/
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{

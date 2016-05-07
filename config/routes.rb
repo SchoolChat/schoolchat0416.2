@@ -1,13 +1,22 @@
 Rails.application.routes.draw do
-
+  get 'schools/indexkubun'
+  get 'welcome/index'
+  get 'welcome/about'
+  get 'welcome/submit'
+  get 'welcome/contact'
+  get 'welcome/news'
+  get 'welcome/files'
   resources :schools do
     resources :comments
   end
 
+  # get '/schools/[:id]' => 'schools#destroy'
+
   resource :registrations, only: [:new, :create]
   resource :sessions, only: [:new, :create, :destroy]
+  get '/users/sign_out' => 'sessions#destroy'
 
-  root to: 'schools#index'
+  root to: 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

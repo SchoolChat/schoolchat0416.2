@@ -1,28 +1,122 @@
 
+.topspace
+
 %p#notice
   = notice
 
-=@school.name
-=@school.location
-=@school.educationalprogram
+.mainbody
+  = link_to '戻る', schools_path
+  .lineorange
+  .lineyellow
+  .container3
+    .school-info
+      %h2
+        =@school.name
+      %table.table{:style => "margin-bottom: 0px"}
+        %tbody
+          %tr
+            %td 所在地
+            %th
+              =@school.location
+          %tr
+            %td 区分
+            %td
+              - if @school.kindergarten == nil
+                = "no input"
+              - else
+                - if @school.kindergarten == true
+                  = "幼"
+
+              - if @school.primary == nil
+                = "no input"
+              - else
+                - if @school.primary == true
+                  = "小"
+
+              - if @school.middle == nil
+                = "no input"
+              - else
+                - if @school.middle == true
+                  = "中"
+
+              - if @school.high == nil
+                = "no input"
+              - else
+                - if @school.high == true
+                  = "高"
+
+          -if @school.educationalprogram.present?
+            %tr
+              %td 教育プログラム
+              %th
+                =@school.educationalprogram
+
+          -if @school.hp.present?
+            %tr
+              %td 学校ホームページ
+              %th
+                =auto_link(simple_format(@school.hp))
+
+  .container4
+    .detail-reviews
+      %h5
+        口コミが
+        =@school.comments.count
+        件見つかりました。
+      %ul.detail-reviews-list{:style => "padding-left: 30px; padding-right: 30px;"}
 
 
-/ ここにコメント一覧
-- @comments.each do |c|
-  %p
-    =auto_link(simple_format(c.content))
-  %p
-    =c.created_at
-  %p
-    =link_to '編集', edit_school_comment_path(@school.id, c.id)
 
-/ここで分岐させて、モヤをかける
+        / ここにコメント一覧
+      - @comments.each do |c|
 
-/ ここにコメント追加 or LOGIN/新規登録の ボタン
-- if logged_in?
-  %h2
-    Add a comment:
+        %li.detail-reviews-block
+          .review-box
+            .row
+              .person-picture.col-xs-4.col-sm-4.col-md-2.col-lg-2{:style => "float: left;"}
+                %a{:href => ""}
+                  / %img.img-responsive
+                  / - image_tag("person.jpg", :style=>"width: 130px; height: 130px;")
+                  / {:src => "../assets/images/person.jpg", :style => "width: 70%; margin-bottom: 30px;"}
+              .balloon.col-xs-12.col-sm-12.col-md-10.col-lg-10{:style => "float: right;"}
+                %h
+                %p
+                  -if logged_in?
+                    =auto_link(simple_format(c.content))
+                    %p
+                      =c.created_at
+                  -else
+                    =auto_link(simple_format(c.content[0,50]))
+                    .space10px
+                    .space10px
+                    .space10px
+                    .space10px
+                    ="　　　　　"
+                    ="....続きは会員登録・ログインしてご覧ください。"
 
+              .balloon.profile.col-xs-8.col-sm-8.col-md-2.col-lg-2{:style => "float: left;"}
+                %h
+                  / %i.fa.fa-user.fa-3x  herokuエラーのため使えなかった。
+                  =auto_link(simple_format(c.userdetail))
+              -if logged_in? && current_user.email=="haru.okaniwa@ezweb.ne.jp"
+                %p
+                  =link_to '　　この口コミを編集　　', edit_school_comment_path(@school.id, c.id)
+                  =link_to '削除', school_comment_path(@school.id, c.id), method: :delete, data: { confirm: 'Are you sure?' }
+
+                  / = link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' }
+        .space10px
+
+  .lineorange
+  .lineyellow
+
+
+  / ここにコメント追加 or LOGIN/新規登録の ボタン
+
+  .googleform{:style => "text-align: center;"}
+    %iframe{:frameborder => "0", :height => "400", :marginheight => "0", :marginwidth => "0", :src => "https://docs.google.com/forms/d/1_mz7pZs_sF3rzb7bF-U-BQOS2oRR0RdM-ekC3Sn-G2s/viewform?embedded=true", :width => "80%"} 読み込み中...
+.adminpage
+
+<<<<<<< HEAD
   = form_for([@school, @school.comments.build]) do |f|
     %p
       = f.label :content
@@ -32,9 +126,22 @@
       = f.text_area :
     %p
       = f.submit
+=======
+  - if logged_in?&& current_user.email == "haru.okaniwa@ezweb.ne.jp"
+    %h5
+      管理者画面：この学校についての口コミを投稿
+    = form_for([@school, @school.comments.build]) do |f|
+      %p
+        = "口コミ内容："
+        = f.text_area :content
+      %p
+        = "口コミ投稿者の詳細"
+        = f.text_area :userdetail, value: :"サイト管理人　岡庭 皆様のお役に立てるよう、数少ないオンラインでの情報をまとめております。"
+>>>>>>> addevents
 
-- else
-  = link_to '回答するには登録/ログイン', new_registrations_path, method: :get
+      %p
+        = f.submit
+    %h5
+      管理者画面：
+      = link_to '学校情報をここから編集', edit_school_path(@school)
 
-= link_to 'Edit', edit_school_path(@school)
-= link_to 'Back', schools_path

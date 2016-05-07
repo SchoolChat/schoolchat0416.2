@@ -1,64 +1,84 @@
-%h1
-  Editing School
+.topspace
+.topspace
 
-= form_for :school, url: school_path, method: :put do |f|
-  - if @school.errors.any?
-    %error_explanation
-      %h2
-        = pluralize(@school.errors.count, "error")
-        %br このままでは投稿ができません。
-      %ul
-        - @school.errors.full_messages.each do |msg|
-          %li= msg
-  %p
-    = f.label :School_Name
-  %p
-    = f.text_field :name
-  %p
-    = f.label :School_Location
-  %p
-    = f.text_field :location
+.space10px
+.space10px
 
-  %p
-    = f.label :Educational_Program_Name
-  %p
-    = f.text_field :educationalprogram
+.editschool{:style=>"padding: 25px;"}
+  %h3
+    学校の情報を編集
 
+  = form_for :school, url: school_path, method: :put do |f|
+    - if @school.errors.any?
+      %error_explanation
+        %h2
+          = pluralize(@school.errors.count, "error")
+          %br このままでは投稿ができません。
+        %ul
+          - @school.errors.full_messages.each do |msg|
+            %li= msg
+    %p
+      = "学校の正式名"
+    %p
+      = f.text_field :name
+    %p
+      = "学校の場所"
+    %p
+      = f.text_field :location
+    %p
+      %label
+        = f.check_box :japan
+        = "日本国内にある場合チェックする"
+    %p
+      = "カリキュラム名"
+    %p
+      = f.text_field :educationalprogram
+    %p
+      = "（IB, GCSE, AP, フランス公教育、日本公教育など)(複数並列可能）"
+    %p
+      = "学校ホームページURL"
+    %p
+      = f.text_field :hp
 
+    / %p
+    /   = "------------------ENG--------------------"
+    / %p
+    /   = "ENG_School_Name"
+    / %p
+    /   = f.text_field :eng_name
+    / %p
+    /   = "ENG_Location"
+    / %p
+    /   = f.text_field :eng_location
+    / %p
+    /   = "ENG_program"
+    / %p
+    /   = f.text_field :eng_program
+    / = "-----------------------------------------"
+    %p
+      = "学校区分"
+    %p
+      %label
+        = f.check_box :kindergarten
+        / # = f.check_box(:kindergarten, { :multiple => true }, true, false)
+        = "幼稚園・保育園"
+    %p
+      %label
+        = f.check_box :primary
+        = "小学校"
+    %p
+      %label
+        = f.check_box :middle
+        = "中学校"
+    %p
+      %label
+        = f.check_box :high
+        = "高校"
+    %p
+      = f.submit
 
-
-  %p
-    = f.label :ENG_School_Name
-  %p
-    = f.text_field :eng_name
-  %p
-    = f.label :ENG_Location
-  %p
-    = f.text_field :eng_location
-  %p
-    = f.label :ENG_program
-  %p
-    = f.text_field :eng_program
-
-
-
-  %p
-    = f.label :School_Type
-  %p
-    = f.check_box :kindergarten
-    = "Kindergarten"
-  %p
-    = f.check_box :primary
-    = "Primary School"
-  %p
-    = f.check_box :middle
-    = "Middle School"
-  %p
-    = f.check_box :high
-    = "High School"
-
-  %p
-    = f.submit
-
-= link_to 'Show', @school
-= link_to 'Back', schools_path
+  .space10px
+  = link_to 'この学校ページへ', @school
+  %br
+  .space10px
+  = link_to '学校一覧ページへ', schools_path

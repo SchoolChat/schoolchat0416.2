@@ -1,11 +1,38 @@
 
+.topspace
+.topspace
+.topspace
+.topspace
+.topspace
+.topspace
+
+%h4
+  ="口コミを編集"
 %p
+  ="口コミ内容："
   =auto_link(simple_format(@comment.content))
+
+%p
+  ="投稿者情報："
+  =simple_format(@comment.userdetail)
 %p
   =@comment.created_at
 
+
+
 = form_for :comment, url: school_comment_path, method: :put do |f|
   %p
+    ="口コミ内容："
     = f.text_area :content
+
+  %p
+    ="投稿者情報："
+    = f.text_area :userdetail
+
   %p
     = f.submit'編集を保存'
+
+
+
+
+  =link_to '削除', school_comment_path(@school.id, @comment.id), method: :delete, data: { confirm: 'Are you sure?' }

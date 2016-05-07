@@ -4,9 +4,15 @@ class SchoolsController < ApplicationController
   # GET /schools
   # GET /schools.json
   def index
-    @schools = School.all
+    @schools = School.order(:location)
     @user = current_user
   end
+
+  def indexkubun
+    @schools = School.order(:location)
+    @user = current_user
+  end
+
 
   # GET /schools/1
   # GET /schools/1.json
@@ -81,6 +87,6 @@ class SchoolsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def school_params
-      params.require(:school).permit(:id, :name, :location, :kindergarten, :primary, :middle, :high, :program, :educationalprogram, :hp)
+      params.require(:school).permit(:id, :name, :location, :kindergarten, :primary, :middle, :high, :program, :educationalprogram, :hp, :japan)
     end
 end

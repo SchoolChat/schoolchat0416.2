@@ -1,13 +1,28 @@
-%h1 Sessions#new
-%p Find me in app/views/sessions/new.html.haml
-
 - if action_name == "create"
   .alert.alert-danger
     メールアドレスまたはパスワードが正しくありません。
 
-= form_for @user, url: sessions_path, method: :post do |f|
-  = f.label :email
-  = f.text_field :email
-  = f.label :password
-  = f.password_field :password
-  = f.submit
+.mainbody
+  .space10px
+  .space10px
+  = link_to "新規登録する", new_registrations_path
+
+
+  = form_for @user, url: sessions_path, method: :post do |f|
+    .input-box{:style => "text-align: center;"}
+      メールアドレス
+      %br
+      = f.text_field :email, :placeholder => "example@example.com"
+      .space10px
+      %br
+      パスワード
+      %br
+      = f.password_field :password, :placeholder => "******"
+      .space10px
+
+      %br
+      = f.submit'ログインする', :class => "btn-signup btn btn-orange"
+
+      .space10px
+      .topspace
+      .topspace

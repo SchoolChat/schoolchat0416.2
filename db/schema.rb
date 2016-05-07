@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520034419) do
+ActiveRecord::Schema.define(version: 20150611022309) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150520034419) do
     t.string   "teaching"
     t.string   "teacherjap"
     t.integer  "attendedyears"
+    t.text     "userdetail"
   end
 
   add_index "comments", ["school_id"], name: "index_comments_on_school_id"
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150520034419) do
     t.string   "eng_location"
     t.text     "eng_program"
     t.text     "hp"
+    t.boolean  "japan"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,6 +78,9 @@ ActiveRecord::Schema.define(version: 20150520034419) do
     t.string   "school2"
     t.text     "program"
     t.text     "bio"
+    t.string   "schoolname"
+    t.integer  "childage"
+    t.text     "schoolinfo"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

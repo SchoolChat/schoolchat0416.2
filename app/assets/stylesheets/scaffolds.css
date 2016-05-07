@@ -739,6 +739,9 @@ textarea{
   color: white;
   background-color: rgb(216, 132, 36);
 }
+.setheading a{
+  color: white;
+}
 .intro-headernews{
   padding-top: 5%;
 }
@@ -759,7 +762,6 @@ textarea{
 }
 
 /*しょうがない*/
-
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
   border:none !important;
 }
@@ -787,7 +789,6 @@ textarea{
 /*qr code for bitcoin*/
 .qrcode{
   width: 100px;
-  margin-left: 40%;
 }
 
 .bitcoin{

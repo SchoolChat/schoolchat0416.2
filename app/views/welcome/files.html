@@ -21,7 +21,6 @@
       <li>・IB MYP（中１~高１） 一覧</li>
       <li>・IB DP（高２~３年） 一覧</li>
       <li>・IB生の非公式ガイド</li>
-      <li>・(Coming Soon)日本人IB生徒のための大学受験ガイド</li>
     </ul>
     <!-- <h5>最終更新：2015年７月２日</h5> -->
     <h5>※個人利用のみ可　または<a href="https://www.facebook.com/haru.okaniwa" target="_blank">こちらから管理者に相談</a></h5>
@@ -29,8 +28,30 @@
 
 <div class="bitcoin setheading">
   <h4>Bitcoinでお礼する</h4>
-<%= image_tag("ProTipAddress1.png", :class=>"img-responsive qrcode") %>
-  1J9kkzH8LNgny3qGuAy8aaLhDGNrcVwyan
+  <center>
+    <%= image_tag("ProTipAddress1.png", :class=>"img-responsive qrcode") %>
+  </center>
+  アドレス: 1J9kkzH8LNgny3qGuAy8aaLhDGNrcVwyan
+<!--   <a href="https://chrome.google.com/webstore/detail/protip-peer-to-peer-crowd/obpohohcmdaklmaagjgdaldgjhohegak">Google Chromeのアプリをダウンロードする</a> -->
+  <div class="space10px"></div>
+  <script>
+  CoinWidgetCom.go({
+    wallet_address: "1J9kkzH8LNgny3qGuAy8aaLhDGNrcVwyan"
+    , currency: "bitcoin"
+    , counter: "count"
+    , alignment: "bl"
+    , qrcode: true
+    , auto_show: false
+    , lbl_button: "Donate"
+    , lbl_address: "Donate Bitcoin to this Address:"
+    , lbl_count: "donations"
+    , lbl_amount: "BTC"
+  });
+  </script>
+  <div class="space10px"></div>
+  <a href="bitflyer.jp">Bitcoinを買う</a>
+  <div class="space10px"></div>
+
 </div>
 
 

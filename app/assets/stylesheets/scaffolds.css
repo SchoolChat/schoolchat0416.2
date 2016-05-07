@@ -779,3 +779,13 @@ textarea{
   text-align: center;
   background-color: #F5BB92 !important;
 }
+
+/*qr code for bitcoin*/
+.qrcode{
+  width: 100px;
+  margin-left: 40%;
+}
+
+.bitcoin{
+  text-align: center;
+}

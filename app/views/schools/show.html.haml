@@ -10,7 +10,7 @@
   .lineyellow
   .container3
     .school-info
-      %h2
+      %h3
         =@school.name
       %table.table{:style => "margin-bottom: 0px"}
         %tbody
@@ -65,8 +65,6 @@
         件見つかりました。
       %ul.detail-reviews-list{:style => "padding-left: 30px; padding-right: 30px;"}
 
-
-
         / ここにコメント一覧
       - @comments.each do |c|
 
@@ -115,18 +113,13 @@
   .googleform{:style => "text-align: center;"}
     %iframe{:frameborder => "0", :height => "400", :marginheight => "0", :marginwidth => "0", :src => "https://docs.google.com/forms/d/1_mz7pZs_sF3rzb7bF-U-BQOS2oRR0RdM-ekC3Sn-G2s/viewform?embedded=true", :width => "80%"} 読み込み中...
 .adminpage
-
-<<<<<<< HEAD
   = form_for([@school, @school.comments.build]) do |f|
     %p
       = f.label :content
       = f.text_area :content
-
-    %p
-      = f.text_area :
     %p
       = f.submit
-=======
+
   - if logged_in?&& current_user.email == "haru.okaniwa@ezweb.ne.jp"
     %h5
       管理者画面：この学校についての口コミを投稿
@@ -137,7 +130,7 @@
       %p
         = "口コミ投稿者の詳細"
         = f.text_area :userdetail, value: :"サイト管理人　岡庭 皆様のお役に立てるよう、数少ないオンラインでの情報をまとめております。"
->>>>>>> addevents
+
 
       %p
         = f.submit

@@ -60,8 +60,6 @@
 
   ga('create', 'UA-61673245-2', 'auto');
   ga('send', 'pageview');
-
-
   </script>
   <%= javascript_include_tag "index"%>
   <%= javascript_include_tag "bootstrap"%>
@@ -70,7 +68,9 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
 <!-- coinwidget bitcoin tipping plugin -->
-  <script src="/assets/javascripts/coin.js"></script>
+  <%= javascript_include_tag "coin.js"%>
+
+  <script src="/assets/coin.js"></script>
   </head>
 
 <!-- TOPBAR -->
